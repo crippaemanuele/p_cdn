@@ -1,0 +1,27 @@
+{
+    "Lunedì": [
+        {
+            "pasto": "Colazione",
+            "alimenti": [
+                { "nome": "Latte di mandorla", "qta": "200 ml" },
+                { "nome": "Fette biscottate integrali", "qta": "4 pezzi" }
+            ]
+        },
+        {
+            "pasto": "Pranzo",
+            "alimenti": [
+                { "nome": "Riso basmati", "qta": "70 g" },
+                { "nome": "Petto di pollo", "qta": "120 g" }
+            ]
+        }
+    ],
+    "Martedì": [
+        {
+            "pasto": "Colazione",
+            "alimenti": [
+                { "nome": "Yogurt bianco magro", "qta": "125 g" },
+                { "nome": "Fiocchi d'avena", "qta": "40 g" }
+            ]
+        }
+    ]
+}
