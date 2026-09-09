@@ -1,27 +1,387 @@
 {
-    "Lunedì": [
-        {
-            "pasto": "Colazione",
-            "alimenti": [
-                { "nome": "Latte di mandorla", "qta": "200 ml" },
-                { "nome": "Fette biscottate integrali", "qta": "4 pezzi" }
-            ]
-        },
-        {
-            "pasto": "Pranzo",
-            "alimenti": [
-                { "nome": "Riso basmati", "qta": "70 g" },
-                { "nome": "Petto di pollo", "qta": "120 g" }
-            ]
-        }
-    ],
-    "Martedì": [
-        {
-            "pasto": "Colazione",
-            "alimenti": [
-                { "nome": "Yogurt bianco magro", "qta": "125 g" },
-                { "nome": "Fiocchi d'avena", "qta": "40 g" }
-            ]
-        }
-    ]
+  "Lunedì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Mandorle dolci - secche", "qta": "15 g" },
+        { "nome": "Albicocche", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Riso basmati", "qta": "50 g" },
+        { "nome": "Lenticchie in scatola - scolate", "qta": "1/2 Vasetto (120 g)" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Grana", "qta": "20 g" },
+        { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Petto di pollo", "qta": "150 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ],
+  "Martedì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Noci - secche", "qta": "15 g" },
+        { "nome": "Prugne", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Pane integrale", "qta": "2 Fette e 1/2 (70 g)" },
+        { "nome": "Uova di gallina - intero", "qta": "120 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Kefir bianco naturale", "qta": "150 g" },
+        { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Spigola filetti", "qta": "200 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ],
+  "Mercoledì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Mandorle dolci - secche", "qta": "15 g" },
+        { "nome": "Albicocche", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Pasta integrale al pomodoro fresco (esempio mensa)", "qta": "60 g" },
+        { "nome": "Mozzarella di vacca", "qta": "100 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Grana", "qta": "20 g" },
+        { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Manzo (media)", "qta": "150 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ],
+  "Giovedì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Noci - secche", "qta": "15 g" },
+        { "nome": "Prugne", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Riso basmati", "qta": "50 g" },
+        { "nome": "Fagioli in scatola", "qta": "1/2 Vasetto (120 g)" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Kefir bianco naturale", "qta": "150 g" },
+        { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Orata fresca", "qta": "200 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ],
+  "Venerdì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Mandorle dolci - secche", "qta": "15 g" },
+        { "nome": "Albicocche", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Pane integrale", "qta": "2 Fette e 1/2 (70 g)" },
+        { "nome": "Uova di gallina - intero", "qta": "120 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Grana", "qta": "20 g" },
+        { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Tacchino - fesa", "qta": "150 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ],
+  "Sabato": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Noci - secche", "qta": "15 g" },
+        { "nome": "Prugne", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Cous Cous", "qta": "60 g" },
+        { "nome": "Gamberetti sgusciati", "qta": "150 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Kefir bianco naturale", "qta": "150 g" },
+        { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Uova di gallina - intero", "qta": "120 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ],
+  "Domenica": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+        { "nome": "Pane integrale", "qta": "1 Fetta e 1/2 (40 g)" },
+        { "nome": "Marmellata - Rigoni di Asiago", "qta": "20 g" },
+        { "nome": "Caffè in tazza", "qta": "1 Tazzina e 1/2 (40 g)" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        { "nome": "Acqua", "qta": "500 g" },
+        { "nome": "Mandorle dolci - secche", "qta": "15 g" },
+        { "nome": "Albicocche", "qta": "3 Frutti (150 g)" }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        { "nome": "Patate", "qta": "200 g" },
+        { "nome": "Burger vegetale Zerbinati", "qta": "120 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        { "nome": "Grana", "qta": "20 g" },
+        { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+        { "nome": "Acqua", "qta": "500 g" }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        { "nome": "Merluzzo o nasello", "qta": "220 g" },
+        { "nome": "Verdure fresche (media)", "qta": "200 g" }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        { "nome": "Tisana in tazza", "qta": "250 g" },
+        { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        { "nome": "Olio di oliva extra vergine", "qta": "2 Cucchiai (20 g)" }
+      ]
+    }
+  ]
 }
