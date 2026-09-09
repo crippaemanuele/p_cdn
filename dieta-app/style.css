@@ -1,100 +1,308 @@
 :root {
-    --primary-color: #2b7a78;
-    --bg-color: #f7f9fb;
-    --card-bg: #ffffff;
-    --text-color: #333333;
+    --primary: #2f7d68;
+    --primary-dark: #1f5e4e;
+    --primary-soft: #e8f4ef;
+    --accent: #f3b75d;
+    --bg: #f4f7f6;
+    --card: rgba(255, 255, 255, 0.94);
+    --text: #24332e;
+    --muted: #6b7d76;
+    --line: #e7eeeb;
+    --shadow: 0 14px 36px rgba(31, 94, 78, 0.10);
+    --radius: 22px;
 }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
     margin: 0;
-    padding: 0;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, rgba(243,183,93,.18), transparent 35%),
+        radial-gradient(circle at top left, rgba(47,125,104,.12), transparent 32%),
+        var(--bg);
+    font-family: Inter, ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
 }
 
-header {
-    background-color: var(--card-bg);
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+button, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+
+.app-shell { min-height: 100vh; }
+
+.app-header {
     position: sticky;
     top: 0;
     z-index: 100;
+    padding: 16px 16px 10px;
+    background: rgba(244, 247, 246, .88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,.75);
+}
+
+.brand-row {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 52px 1fr 44px;
+    gap: 12px;
+    align-items: center;
+}
+
+.brand-mark {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+    background: white;
+    border-radius: 17px;
+    box-shadow: var(--shadow);
+    animation: logoIn .65s cubic-bezier(.2,.8,.2,1) both;
+}
+.brand-mark svg { width: 37px; height: 37px; }
+
+.eyebrow {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--primary);
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
 }
 
 h1 {
+    margin: 0;
+    font-size: clamp(1.28rem, 5vw, 1.7rem);
+    line-height: 1.08;
+}
+
+.current-label {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: .82rem;
+}
+
+.icon-btn, .close-btn {
+    border: 0;
+    cursor: pointer;
+    color: var(--primary-dark);
+    background: white;
+    box-shadow: 0 8px 20px rgba(31,94,78,.10);
+}
+
+.icon-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
     font-size: 1.2rem;
-    margin: 0 0 10px 0;
-    text-align: center;
-    color: var(--primary-color);
+    transition: transform .2s ease, background .2s ease;
+}
+.icon-btn:hover { transform: translateY(-2px) rotate(-3deg); background: var(--primary-soft); }
+
+.calendar-panel {
+    max-width: 720px;
+    margin: 12px auto 4px;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.96);
+    box-shadow: var(--shadow);
+    transform-origin: top;
+    animation: calendarIn .28s ease both;
+}
+.calendar-panel[hidden] { display: none; }
+.calendar-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.calendar-head strong { display: block; margin-bottom: 3px; }
+.calendar-head span { color: var(--muted); font-size: .8rem; }
+.close-btn { width: 32px; height: 32px; border-radius: 10px; font-size: 1.3rem; }
+.calendar-actions { display: grid; grid-template-columns: 1fr auto; gap: 9px; margin-top: 12px; }
+.calendar-actions input {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    padding: 10px 12px;
+    color: var(--text);
+    background: #fbfdfc;
+}
+.secondary-btn {
+    border: 0;
+    border-radius: 13px;
+    padding: 10px 15px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    font-weight: 800;
+    cursor: pointer;
 }
 
 .days-scroll {
+    max-width: 720px;
+    margin: 13px auto 0;
     display: flex;
     gap: 8px;
     overflow-x: auto;
-    padding-bottom: 5px;
+    padding: 2px 2px 7px;
+    scrollbar-width: none;
 }
+.days-scroll::-webkit-scrollbar { display: none; }
 
 .day-btn {
-    background: #e4e9ed;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    flex: 0 0 auto;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 9px 13px;
+    background: rgba(255,255,255,.78);
+    color: var(--muted);
     cursor: pointer;
-    white-space: nowrap;
+    font-size: .86rem;
+    font-weight: 700;
+    transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
 }
-
+.day-btn:hover { transform: translateY(-1px); }
 .day-btn.active {
-    background: var(--primary-color);
     color: white;
-    font-weight: bold;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 8px 18px rgba(47,125,104,.25);
 }
+.day-btn.today:not(.active) { border-color: rgba(47,125,104,.28); color: var(--primary-dark); }
 
 main {
-    padding: 15px;
-    max-width: 600px;
+    width: min(720px, 100%);
     margin: 0 auto;
+    padding: 16px 16px 90px;
 }
+
+.next-meal-banner {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 2px 0 14px;
+    padding: 15px 16px;
+    border-radius: var(--radius);
+    color: white;
+    background: linear-gradient(135deg, var(--primary), #449d80);
+    box-shadow: var(--shadow);
+    animation: cardIn .45s ease both;
+}
+.next-meal-banner.visible { display: block; }
+.next-meal-banner::after {
+    content: "";
+    position: absolute;
+    width: 100px; height: 100px;
+    right: -25px; top: -35px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.09);
+}
+.next-meal-banner .banner-kicker { font-size: .73rem; font-weight: 800; opacity: .84; text-transform: uppercase; letter-spacing: .08em; }
+.next-meal-banner .banner-title { margin-top: 3px; font-size: 1.08rem; font-weight: 850; }
+.next-meal-banner .banner-sub { margin-top: 3px; font-size: .84rem; opacity: .88; }
 
 .meal-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 10px 28px rgba(37, 72, 60, .07);
+    animation: cardIn .42s ease both;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.meal-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.meal-card.next-meal {
+    border-color: rgba(243,183,93,.75);
+    box-shadow: 0 12px 34px rgba(243,183,93,.18);
+}
+.meal-card.next-meal::before {
+    content: "PROSSIMO";
+    position: absolute;
+    top: 12px;
+    right: -31px;
+    width: 122px;
+    padding: 4px 0;
+    text-align: center;
+    transform: rotate(42deg);
+    color: #5c4421;
+    background: #ffd68d;
+    font-size: .62rem;
+    font-weight: 900;
+    letter-spacing: .08em;
 }
 
-.meal-title {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-    text-transform: uppercase;
+.meal-head { display: flex; align-items: center; gap: 11px; padding-right: 30px; margin-bottom: 9px; }
+.meal-icon {
+    flex: 0 0 42px;
+    width: 42px; height: 42px;
+    display: grid; place-items: center;
+    border-radius: 14px;
+    background: var(--primary-soft);
+    font-size: 1.28rem;
 }
+.meal-title { color: var(--primary-dark); font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .025em; }
+.meal-time { margin-top: 2px; color: var(--muted); font-size: .76rem; }
 
 .food-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
 }
-
-.food-item:last-child {
-    border-bottom: none;
-}
-
-.food-name {
-    font-size: 0.95rem;
-}
-
+.food-item:last-child { border-bottom: 0; padding-bottom: 2px; }
+.food-name { min-width: 0; font-size: .94rem; line-height: 1.3; }
 .food-quantity {
-    font-weight: bold;
-    color: #2c3e50;
-    background: #eef2f5;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 0.9rem;
+    flex: 0 0 auto;
+    max-width: 48%;
+    padding: 5px 9px;
+    border-radius: 9px;
+    color: var(--primary-dark);
+    background: var(--primary-soft);
+    font-size: .82rem;
+    font-weight: 800;
+    text-align: right;
+}
+
+.loading-card, .error-card {
+    padding: 22px;
+    text-align: center;
+    border-radius: var(--radius);
+    background: white;
+    box-shadow: var(--shadow);
+    color: var(--muted);
+}
+.error-card { color: #a94747; }
+
+.floating-next {
+    position: fixed;
+    right: 18px;
+    bottom: calc(18px + env(safe-area-inset-bottom));
+    z-index: 90;
+    width: 52px; height: 52px;
+    border: 0;
+    border-radius: 17px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 12px 30px rgba(31,94,78,.28);
+    font-size: 1.25rem;
+    animation: popIn .35s ease both;
+}
+
+@keyframes cardIn { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes calendarIn { from { opacity: 0; transform: translateY(-6px) scaleY(.94); } to { opacity: 1; transform: none; } }
+@keyframes logoIn { from { opacity: 0; transform: rotate(-12deg) scale(.82); } to { opacity: 1; transform: none; } }
+@keyframes popIn { from { opacity: 0; transform: scale(.75); } to { opacity: 1; transform: scale(1); } }
+
+@media (min-width: 720px) {
+    .app-header { padding-top: 22px; }
+    main { padding-top: 22px; }
+    .meal-card { padding: 18px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
