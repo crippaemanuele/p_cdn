@@ -1,58 +1,153 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2f7d68">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2b7a78"
+    >
+
     <title>Il Mio Piano Alimentare</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
+
 <body>
-    <div class="app-shell">
-        <header class="app-header">
-            <div class="brand-row">
-                <div class="brand-mark" aria-hidden="true">
-                    <svg viewBox="0 0 64 64" role="img">
-                        <path d="M32 55c-2-17 1-31 19-42 0 22-9 36-19 42Z" fill="currentColor" opacity=".95"/>
-                        <path d="M31 55C28 39 20 28 7 21c1 18 10 29 24 34Z" fill="currentColor" opacity=".62"/>
-                        <path d="M31 54c0-18 6-29 17-37" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".75"/>
-                    </svg>
-                </div>
-                <div class="brand-copy">
-                    <span class="eyebrow">Il mio benessere quotidiano</span>
-                    <h1>Piano Alimentare</h1>
-                    <p id="current-label" class="current-label"></p>
-                </div>
-                <button id="calendar-toggle" class="icon-btn" type="button" aria-label="Apri calendario" aria-expanded="false" aria-controls="calendar-panel">📅</button>
-            </div>
 
-            <div id="calendar-panel" class="calendar-panel" hidden>
-                <div class="calendar-head">
-                    <div>
-                        <strong>Vai a una data</strong>
-                        <span>Scegli un giorno: verrà aperto il relativo menu settimanale.</span>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="app-header">
+
+        <div class="brand-row">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    🌿
+                </div>
+
+                <div>
+                    <h1>Il mio piano alimentare</h1>
+
+                    <div class="today-info">
+                        <span id="current-date"></span>
+                        <span class="separator">•</span>
+                        <span id="current-time"></span>
                     </div>
-                    <button id="calendar-close" class="close-btn" type="button" aria-label="Chiudi calendario">×</button>
                 </div>
-                <div class="calendar-actions">
-                    <input id="date-picker" type="date" aria-label="Seleziona una data">
-                    <button id="today-btn" class="secondary-btn" type="button">Oggi</button>
-                </div>
+
             </div>
 
-            <nav id="days-container" class="days-scroll" aria-label="Giorni della settimana"></nav>
-        </header>
 
-        <main>
-            <section id="next-meal-banner" class="next-meal-banner" aria-live="polite"></section>
-            <section id="meal-view" aria-live="polite">
-                <div class="loading-card">Caricamento del piano alimentare…</div>
-            </section>
-        </main>
-    </div>
+            <button
+                id="calendar-toggle"
+                class="icon-btn"
+                aria-label="Apri calendario"
+                title="Calendario"
+            >
+                📅
+            </button>
 
-    <button id="back-to-next" class="floating-next" type="button" hidden aria-label="Vai al pasto più prossimo">⏱️</button>
+        </div>
+
+
+        <!-- CALENDARIO A SCOMPARSA -->
+
+        <div
+            id="calendar-panel"
+            class="calendar-panel"
+        >
+
+            <div class="calendar-title">
+                📅 Vai a una data
+            </div>
+
+            <input
+                type="date"
+                id="date-picker"
+            >
+
+            <button
+                id="today-btn"
+                class="secondary-btn"
+            >
+                📍 Torna a oggi
+            </button>
+
+        </div>
+
+
+        <!-- PASTO PIÙ PROSSIMO -->
+
+        <div
+            id="next-meal-banner"
+            class="next-meal-banner"
+        ></div>
+
+
+        <!-- NAVIGAZIONE GIORNI -->
+
+        <div
+            id="days-container"
+            class="days-scroll"
+        ></div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENUTO
+    ========================== -->
+
+    <main>
+
+        <div
+            id="meal-view"
+            class="meal-view"
+        ></div>
+
+    </main>
+
+
+    <!-- =========================
+         PULSANTE FLOTTANTE
+    ========================== -->
+
+    <button
+        id="next-meal-btn"
+        class="floating-btn"
+        title="Vai al prossimo pasto"
+        aria-label="Vai al prossimo pasto"
+    >
+        ⏱️
+    </button>
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
