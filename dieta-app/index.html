@@ -1,153 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
+   <head>
+      <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+      <meta name="theme-color" content="#2b7a78" />
 
-    <meta
-        name="theme-color"
-        content="#2b7a78"
-    >
+      <title>Il Mio Piano Alimentare</title>
 
-    <title>Il Mio Piano Alimentare</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-</head>
-
-
-<body>
-
-    <!-- =========================
+   <body>
+      <!-- =========================
          HEADER
     ========================== -->
 
-    <header class="app-header">
-
-        <div class="brand-row">
-
+      <header class="app-header">
+         <div class="brand-row">
             <div class="brand">
+               <div class="brand-logo">🌿</div>
 
-                <div class="brand-logo">
-                    🌿
-                </div>
+               <div>
+                  <h1>Il mio piano alimentare</h1>
 
-                <div>
-                    <h1>Il mio piano alimentare</h1>
-
-                    <div class="today-info">
-                        <span id="current-date"></span>
-                        <span class="separator">•</span>
-                        <span id="current-time"></span>
-                    </div>
-                </div>
-
+                  <div class="today-info">
+                     <span id="current-date"></span>
+                     <span class="separator">•</span>
+                     <span id="current-time"></span>
+                  </div>
+               </div>
             </div>
 
-
             <button
-                id="calendar-toggle"
-                class="icon-btn"
-                aria-label="Apri calendario"
-                title="Calendario"
+               id="calendar-toggle"
+               class="icon-btn"
+               aria-label="Apri calendario"
+               title="Calendario"
             >
-                📅
+               📅
             </button>
+         </div>
 
-        </div>
+         <!-- CALENDARIO A SCOMPARSA -->
 
+         <div id="calendar-panel" class="calendar-panel">
+            <div class="calendar-title">📅 Vai a una data</div>
 
-        <!-- CALENDARIO A SCOMPARSA -->
+            <input type="date" id="date-picker" />
 
-        <div
-            id="calendar-panel"
-            class="calendar-panel"
-        >
-
-            <div class="calendar-title">
-                📅 Vai a una data
-            </div>
-
-            <input
-                type="date"
-                id="date-picker"
-            >
-
-            <button
-                id="today-btn"
-                class="secondary-btn"
-            >
-                📍 Torna a oggi
+            <button id="today-btn" class="secondary-btn">
+               📍 Torna a oggi
             </button>
+         </div>
 
-        </div>
+         <!-- PASTO PIÙ PROSSIMO -->
 
+         <div id="next-meal-banner" class="next-meal-banner"></div>
 
-        <!-- PASTO PIÙ PROSSIMO -->
+         <!-- NAVIGAZIONE GIORNI -->
 
-        <div
-            id="next-meal-banner"
-            class="next-meal-banner"
-        ></div>
+         <div id="days-container" class="days-scroll"></div>
+      </header>
 
-
-        <!-- NAVIGAZIONE GIORNI -->
-
-        <div
-            id="days-container"
-            class="days-scroll"
-        ></div>
-
-    </header>
-
-
-    <!-- =========================
+      <!-- =========================
          CONTENUTO
     ========================== -->
 
-    <main>
+      <main>
+         <div id="meal-view" class="meal-view"></div>
+      </main>
 
-        <div
-            id="meal-view"
-            class="meal-view"
-        ></div>
-
-    </main>
-
-
-    <!-- =========================
+      <!-- =========================
          PULSANTE FLOTTANTE
     ========================== -->
 
-    <button
-        id="next-meal-btn"
-        class="floating-btn"
-        title="Vai al prossimo pasto"
-        aria-label="Vai al prossimo pasto"
-    >
-        ⏱️
-    </button>
+      <button
+         id="next-meal-btn"
+         class="floating-btn"
+         title="Vai al prossimo pasto"
+         aria-label="Vai al prossimo pasto"
+      >
+         ⏱️
+      </button>
 
-
-    <!-- =========================
+      <!-- =========================
          TOAST
     ========================== -->
 
-    <div
-        id="toast"
-        class="toast"
-    ></div>
+      <div id="toast" class="toast"></div>
 
-
-    <script src="script.js"></script>
-
-</body>
-
+      <script src="script.js"></script>
+   </body>
 </html>
