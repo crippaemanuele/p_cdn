@@ -1,1185 +1,1299 @@
 {
-  "titolo": "Piano Alimentare Personalizzato - Transizione 3a settimana",
-  "paziente": "Tallarico Filomena",
-  "nutrizionista": "Dott.ssa Stefania Martini",
-  "giorni": [
+  "Lunedì": [
     {
-      "giorno": "Lunedì",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Yogurt greco 0% bianco",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Latte di Mandorla - Alpro Soya", "quantita": "200 g" },
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci - secche", "quantita": "15 g" },
-              { "alimento": "Nocciole secche", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Riso basmati",
-            "quantita": "50 g",
-            "alternative": [
-              { "alimento": "Cous Cous", "quantita": "50 g" },
-              { "alimento": "Quinoa", "quantita": "50 g" },
-              { "alimento": "Farro", "quantita": "50 g" },
-              { "alimento": "Orzo perlato", "quantita": "50 g" }
-            ]
-          },
-          {
-            "alimento": "Piselli in scatola - scolati",
-            "quantita": "1/2 Vasetto (120 g)",
-            "alternative": [
-              { "alimento": "Ceci in scatola - scolati", "quantita": "1/2 Vasetto (120 g)" },
-              { "alimento": "Lenticchie in scatola - scolate", "quantita": "1/2 Vasetto (120 g)" },
-              { "alimento": "Fagioli in scatola", "quantita": "1/2 Vasetto (120 g)" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Grana",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Emmenthal", "quantita": "20 g" },
-              { "alimento": "Parmigiano", "quantita": "20 g" },
-              { "alimento": "Ricotta di vacca", "quantita": "40 g" },
-              { "alimento": "Hummus di Ceci - Bio Appetì", "quantita": "20 g (1 cucchiaio da spalmare sui crackers)" }
-            ]
-          },
-          {
-            "alimento": "Mela",
-            "quantita": "1 Frutto (150 g)",
-            "alternative": [
-              { "alimento": "Crackers Integrali - Misura", "quantita": "35 g" },
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Petto di pollo",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Pollo - sovracoscio - senza pelle", "quantita": "150 g" },
-              { "alimento": "Pollo coscia - senza pelle", "quantita": "150 g" },
-              { "alimento": "Tacchino - fesa", "quantita": "150 g" },
-              { "alimento": "Coniglio magro", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Yogurt greco 0% bianco",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
     },
     {
-      "giorno": "Martedì",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Latte di Mandorla - Alpro Soya",
-            "quantita": "200 g",
-            "alternative": [
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt greco 0% bianco", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" },
-              { "alimento": "Biscotti Fibrextra Integrali - Misura", "quantita": "25 g" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci - secche", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Nocciole - secche", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Pane integrale",
-            "quantita": "2 Fette (60 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "2 Fette (60 g)" },
-              { "alimento": "Integrale - Wasa", "quantita": "30 g" }
-            ]
-          },
-          {
-            "alimento": "Uova di gallina - intero",
-            "quantita": "120 g",
-            "alternative": [
-              { "alimento": "Frittata", "quantita": "120 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Yogurt parzial.scremato",
-            "quantita": "1 Vasetto (125 g)",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Cioccolato fondente 85%", "quantita": "10 g" }
-            ]
-          },
-          {
-            "alimento": "Pesca",
-            "quantita": "1 Frutto e 1/2 (150 g)",
-            "alternative": [
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Spigola filetti",
-            "quantita": "200 g",
-            "alternative": [
-              { "alimento": "Orata fresca", "quantita": "200 g" },
-              { "alimento": "Merluzzo o nasello", "quantita": "220 g" },
-              { "alimento": "Sogliola", "quantita": "200 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci - secche", "qta": "15 g" },
+            { "nome": "Nocciole secche", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
     },
     {
-      "giorno": "Mercoledì",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Yogurt greco 0% bianco",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Latte di Mandorla - Alpro Soya", "quantita": "200 g" },
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci - secche", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Nocciole - secche", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Pane integrale",
-            "quantita": "2 Fette (60 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "2 Fette (60 g)" },
-              { "alimento": "Integrale - Wasa", "quantita": "30 g" }
-            ]
-          },
-          {
-            "alimento": "Mozzarella di vacca",
-            "quantita": "100 g",
-            "alternative": [
-              { "alimento": "Crescenza", "quantita": "100 g" },
-              { "alimento": "Fiocchi di latte", "quantita": "150 g" },
-              { "alimento": "Robiola", "quantita": "100 g" },
-              { "alimento": "Ricotta di vacca", "quantita": "120 g" },
-              { "alimento": "Caprini di Latte Vaccino - Osella", "quantita": "100 g" },
-              { "alimento": "Primosale - Osella", "quantita": "100 g" },
-              { "alimento": "Stracchino - Nonno Nanni", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Grana",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Emmenthal", "quantita": "20 g" },
-              { "alimento": "Parmigiano", "quantita": "20 g" },
-              { "alimento": "Ricotta di vacca", "quantita": "40 g" },
-              { "alimento": "Hummus di Ceci - Bio Appetì", "quantita": "20 g (1 cucchiaio da spalmare sui crackers)" }
-            ]
-          },
-          {
-            "alimento": "Mela",
-            "quantita": "1 Frutto (150 g)",
-            "alternative": [
-              { "alimento": "Crackers Integrali - Misura", "quantita": "35 g" },
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Manzo (media)",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Vitello - filetto", "quantita": "150 g" },
-              { "alimento": "Tartare di carne", "quantita": "120 g" },
-              { "alimento": "Roast-beef fesa o filetto di vitello o vitellone o carpaccio di carne (SENZA GRANA)", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Riso basmati",
+          "qta": "50 g",
+          "alternative": [
+            { "nome": "Cous Cous", "qta": "50 g" },
+            { "nome": "Quinoa", "qta": "50 g" },
+            { "nome": "Farro", "qta": "50 g" },
+            { "nome": "Orzo perlato", "qta": "50 g" }
+          ]
+        },
+        {
+          "nome": "Piselli in scatola - scolati",
+          "qta": "1/2 Vasetto (120 g)",
+          "alternative": [
+            { "nome": "Ceci in scatola - scolati", "qta": "1/2 Vasetto (120 g)" },
+            { "nome": "Lenticchie in scatola - scolate", "qta": "1/2 Vasetto (120 g)" },
+            { "nome": "Fagioli in scatola", "qta": "1/2 Vasetto (120 g)" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
     },
     {
-      "giorno": "Giovedì",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Latte di Mandorla - Alpro Soya",
-            "quantita": "200 g",
-            "alternative": [
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt greco 0% bianco", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" },
-              { "alimento": "Biscotti Fibrextra Integrali - Misura", "quantita": "25 g" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci - secche", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Nocciole - secche", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Riso basmati",
-            "quantita": "50 g",
-            "alternative": [
-              { "alimento": "Cous Cous", "quantita": "50 g" },
-              { "alimento": "Quinoa", "quantita": "50 g" },
-              { "alimento": "Farro", "quantita": "50 g" },
-              { "alimento": "Orzo perlato", "quantita": "50 g" }
-            ]
-          },
-          {
-            "alimento": "Lenticchie in scatola - scolate",
-            "quantita": "1/2 Vasetto (120 g)",
-            "alternative": [
-              { "alimento": "Piselli in scatola - scolati", "quantita": "1/2 Vasetto (120 g)" },
-              { "alimento": "Ceci in scatola - scolati", "quantita": "1/2 Vasetto (120 g)" },
-              { "alimento": "Fagioli in scatola", "quantita": "1/2 Vasetto (120 g)" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Yogurt parzial.scremato",
-            "quantita": "1 Vasetto (125 g)",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Cioccolato fondente 85%", "quantita": "10 g" }
-            ]
-          },
-          {
-            "alimento": "Pesca",
-            "quantita": "1 Frutto e 1/2 (150 g)",
-            "alternative": [
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Orata fresca",
-            "quantita": "200 g",
-            "alternative": [
-              { "alimento": "Spigola filetti", "quantita": "200 g" },
-              { "alimento": "Merluzzo o nasello", "quantita": "220 g" },
-              { "alimento": "Sogliola", "quantita": "200 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Grana",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Emmenthal", "qta": "20 g" },
+            { "nome": "Parmigiano", "qta": "20 g" },
+            { "nome": "Ricotta di vacca", "qta": "40 g" },
+            { "nome": "Hummus di Ceci - Bio Appetì", "qta": "20 g (1 cucchiaio da spalmare sui crackers)" }
+          ]
+        },
+        {
+          "nome": "Mela",
+          "qta": "1 Frutto (150 g)",
+          "alternative": [
+            { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
     },
     {
-      "giorno": "Venerdì",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Yogurt greco 0% bianco",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Latte di Mandorla - Alpro Soya", "quantita": "200 g" },
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci - secche", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Nocciole - secche", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Pane integrale",
-            "quantita": "2 Fette (60 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "2 Fette (60 g)" },
-              { "alimento": "Integrale - Wasa", "quantita": "30 g" }
-            ]
-          },
-          {
-            "alimento": "Uova di gallina - intero",
-            "quantita": "120 g",
-            "alternative": [
-              { "alimento": "Frittata", "quantita": "120 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Grana",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Emmenthal", "quantita": "20 g" },
-              { "alimento": "Parmigiano", "quantita": "20 g" },
-              { "alimento": "Ricotta di vacca", "quantita": "40 g" },
-              { "alimento": "Hummus di Ceci - Bio Appetì", "quantita": "20 g (1 cucnaio da spalmare sui crackers)" }
-            ]
-          },
-          {
-            "alimento": "Mela",
-            "quantita": "1 Frutto (150 g)",
-            "alternative": [
-              { "alimento": "Crackers Integrali - Misura", "quantita": "35 g" },
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Prosciutto crudo magro",
-            "quantita": "80 g",
-            "alternative": [
-              { "alimento": "Petto di pollo", "quantita": "150 g" },
-              { "alimento": "Tacchino fesa", "quantita": "150 g" },
-              { "alimento": "Pollo - sovracoscio - senza pelle", "quantita": "150 g" },
-              { "alimento": "Pollo coscia senza pelle", "quantita": "150 g" },
-              { "alimento": "Coniglio magro", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Melone",
-            "quantita": "2 Fette (200 g)",
-            "alternative": [
-              { "alimento": "Verdure fresche (media)", "quantita": "200 g" }
-            ]
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Petto di pollo",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Pollo - sovracoscio - senza pelle", "qta": "150 g" },
+            { "nome": "Pollo coscia - senza pelle", "qta": "150 g" },
+            { "nome": "Tacchino - fesa", "qta": "150 g" },
+            { "nome": "Coniglio magro", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
     },
     {
-      "giorno": "Sabato",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Latte di Mandorla - Alpro Soya",
-            "quantita": "200 g",
-            "alternative": [
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt greco 0% bianco", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" },
-              { "alimento": "Biscotti Fibrextra Integrali - Misura", "quantita": "25 g" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci secche", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Nocciole secche", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Pasta di semola integrale",
-            "quantita": "3/4 di Piatto (60 g)",
-            "alternative": [
-              { "alimento": "Pasta integrale al pomodoro fresco", "quantita": "60 g" },
-              { "alimento": "Cous Cous", "quantita": "60 g" },
-              { "alimento": "Riso basmati", "quantita": "60 g" }
-            ]
-          },
-          {
-            "alimento": "Salmone fresco",
-            "quantita": "130 g",
-            "alternative": [
-              { "alimento": "Sogliola", "quantita": "200 g" },
-              { "alimento": "Merluzzo o nasello", "quantita": "200 g" },
-              { "alimento": "Spigola filetti", "quantita": "180 g" },
-              { "alimento": "Orata fresca", "quantita": "180 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Yogurt parzial.scremato",
-            "quantita": "1 Vasetto (125 g)",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Cioccolato fondente 85%", "quantita": "10 g" }
-            ]
-          },
-          {
-            "alimento": "Pesca",
-            "quantita": "1 Frutto e 1/2 (150 g)",
-            "alternative": [
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Tacchino - fesa",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Pollo - sovracoscio - senza pelle", "quantita": "150 g" },
-              { "alimento": "Pollo coscia - senza pelle", "quantita": "150 g" },
-              { "alimento": "Petto di pollo", "quantita": "150 g" },
-              { "alimento": "Coniglio magro", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
     },
     {
-      "giorno": "Domenica",
-      "pasti": {
-        "COLAZIONE": [
-          {
-            "alimento": "Yogurt greco 0% bianco",
-            "quantita": "150 g",
-            "alternative": [
-              { "alimento": "Kefir bianco naturale", "quantita": "150 g" },
-              { "alimento": "Yogurt parzial.scremato", "quantita": "1 Vasetto (150 g)" },
-              { "alimento": "Latte di Mandorla - Alpro Soya", "quantita": "200 g" },
-              { "alimento": "Latte di avena", "quantita": "200 g" },
-              { "alimento": "Skyr bianco naturale", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Pane integrale",
-            "quantita": "1 Fetta e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Pane di segale", "quantita": "1 Fetta e 1/2 (40 g)" },
-              { "alimento": "Cornflakes", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fiocchi di riso", "quantita": "3 Cucchiai (30 g)" },
-              { "alimento": "Fette biscottate integrali", "quantita": "3 Fette (30 g)" }
-            ]
-          },
-          {
-            "alimento": "Marmellata - Rigoni di Asiago",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Mirtilli", "quantita": "100 g" },
-              { "alimento": "Kiwi", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto (100 g)" },
-              { "alimento": "Lamponi", "quantita": "100 g" }
-            ]
-          },
-          {
-            "alimento": "Caffe' in tazza",
-            "quantita": "1 Tazzina e 1/2 (40 g)",
-            "alternative": [
-              { "alimento": "Te' in tazza", "quantita": "1 Tazza e 1/2 (250 g)" },
-              { "alimento": "Tisana in tazza", "quantita": "1 Tazza (250 g)" }
-            ]
-          }
-        ],
-        "SPUNTINO MATT.": [
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso della mattina"
-          },
-          {
-            "alimento": "Mandorle dolci - secche",
-            "quantita": "15 g",
-            "alternative": [
-              { "alimento": "Noci - secche", "quantita": "15 g" },
-              { "alimento": "Noci pecan", "quantita": "15 g" },
-              { "alimento": "Nocciole - secche", "quantita": "15 g" },
-              { "alimento": "Pistacchi", "quantita": "15 g" },
-              { "alimento": "Anacardi", "quantita": "15 g" },
-              { "alimento": "Macadamia", "quantita": "15 g" }
-            ]
-          },
-          {
-            "alimento": "Albicocche",
-            "quantita": "3 Frutti (150 g)",
-            "alternative": [
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Mela", "quantita": "1 Frutto (150 g)" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          }
-        ],
-        "PRANZO": [
-          {
-            "alimento": "Patate",
-            "quantita": "200 g",
-            "alternative": [
-              { "alimento": "Pasta integrale al pomodoro fresco", "quantita": "60 g" },
-              { "alimento": "Riso basmati", "quantita": "60 g" }
-            ]
-          },
-          {
-            "alimento": "Hamburger - Fileni",
-            "quantita": "120 g",
-            "alternative": [
-              { "alimento": "Polpette", "quantita": "130 g" },
-              { "alimento": "Petto di pollo", "quantita": "150 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "MERENDA": [
-          {
-            "alimento": "Grana",
-            "quantita": "20 g",
-            "alternative": [
-              { "alimento": "Emmenthal", "quantita": "20 g" },
-              { "alimento": "Parmigiano", "quantita": "20 g" },
-              { "alimento": "Ricotta di vacca", "quantita": "40 g" },
-              { "alimento": "Hummus di Ceci - Bio Appetì", "quantita": "20 g (1 cucchiaio da spalmare sui crackers)" }
-            ]
-          },
-          {
-            "alimento": "Mela",
-            "quantita": "1 Frutto (150 g)",
-            "alternative": [
-              { "alimento": "Crackers Integrali - Misura", "quantita": "35 g" },
-              { "alimento": "Albicocche", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Pesca", "quantita": "1 Frutto e 1/2 (150 g)" },
-              { "alimento": "Ciliege", "quantita": "150 g" },
-              { "alimento": "Kiwi", "quantita": "2 Frutti (150 g)" },
-              { "alimento": "Banane", "quantita": "1 Frutto (120 g)" },
-              { "alimento": "Lamponi", "quantita": "150 g" },
-              { "alimento": "Mirtilli", "quantita": "150 g" },
-              { "alimento": "Prugne", "quantita": "3 Frutti (150 g)" },
-              { "alimento": "Uva", "quantita": "120 g" },
-              { "alimento": "Melone", "quantita": "1 Fetta e 1/2 (150 g)" }
-            ]
-          },
-          {
-            "alimento": "Acqua",
-            "quantita": "500 g",
-            "note": "da bere nel corso del pomeriggio"
-          }
-        ],
-        "CENA": [
-          {
-            "alimento": "Merluzzo o nasello",
-            "quantita": "220 g",
-            "alternative": [
-              { "alimento": "Sogliola", "quantita": "200 g" },
-              { "alimento": "Polpo", "quantita": "250 g" },
-              { "alimento": "Orata fresca", "quantita": "200 g" },
-              { "alimento": "Seppia", "quantita": "250 g" },
-              { "alimento": "Spigola filetti", "quantita": "200 g" },
-              { "alimento": "Calamaro", "quantita": "250 g" }
-            ]
-          },
-          {
-            "alimento": "Verdure fresche (media)",
-            "quantita": "200 g"
-          }
-        ],
-        "SPUNTINO SER.": [
-          {
-            "alimento": "Tisana in tazza",
-            "quantita": "1 Tazza (250 g)",
-            "note": "una camomilla o tisana se gradita dopo cena senza zucchero"
-          }
-        ],
-        "DURANTE LA GIORNATA": [
-          {
-            "alimento": "Olio di oliva extra vergine",
-            "quantita": "2 Cucchiai (20 g)"
-          }
-        ]
-      }
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
     }
   ],
-  "note_generali": {
-    "bevande_vegetali": "scegliere bevande vegetali senza zuccheri aggiunti",
-    "frutta_secca": "tutta la frutta secca deve essere al naturale, non salata nè zuccherata; è possibile fare anche un mix di frutta secca",
-    "verdura": "150-200 g di verdura cruda o cotta, oppure 70-80 g di verdura a foglia (insalata). E' possibile anche fare un mix di più verdure",
-    "uova": "due uova intere cucinate sode, in frittata, strapazzate, in camicia, all'occhio di bue, al tegamino senza burro",
-    "polpette": "preparate con carne macinata di 1a scelta + albume d'uovo pastorizzato, poco parmigiano reggiano, sale, pepe, erbe aromatiche a piacere, passate nel pangrattato e cotte al forno o in padella con un goccio d'olio"
-  }
+  "Martedì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Latte di Mandorla - Alpro Soya",
+          "qta": "200 g",
+          "alternative": [
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt greco 0% bianco", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" },
+            { "nome": "Biscotti Fibrextra Integrali - Misura", "qta": "25 g" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci - secche", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Nocciole - secche", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Pane integrale",
+          "qta": "2 Fette (60 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "2 Fette (60 g)" },
+            { "nome": "Integrale - Wasa", "qta": "30 g" }
+          ]
+        },
+        {
+          "nome": "Uova di gallina - intero",
+          "qta": "120 g",
+          "alternative": [
+            { "nome": "Frittata", "qta": "120 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Yogurt parzial.scremato",
+          "qta": "1 Vasetto (125 g)",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+          ]
+        },
+        {
+          "nome": "Pesca",
+          "qta": "1 Frutto e 1/2 (150 g)",
+          "alternative": [
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Spigola filetti",
+          "qta": "200 g",
+          "alternative": [
+            { "nome": "Orata fresca", "qta": "200 g" },
+            { "nome": "Merluzzo o nasello", "qta": "220 g" },
+            { "nome": "Sogliola", "qta": "200 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
+    }
+  ],
+  "Mercoledì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Yogurt greco 0% bianco",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci - secche", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Nocciole - secche", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Pane integrale",
+          "qta": "2 Fette (60 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "2 Fette (60 g)" },
+            { "nome": "Integrale - Wasa", "qta": "30 g" }
+          ]
+        },
+        {
+          "nome": "Mozzarella di vacca",
+          "qta": "100 g",
+          "alternative": [
+            { "nome": "Crescenza", "qta": "100 g" },
+            { "nome": "Fiocchi di latte", "qta": "150 g" },
+            { "nome": "Robiola", "qta": "100 g" },
+            { "nome": "Ricotta di vacca", "qta": "120 g" },
+            { "nome": "Caprini di Latte Vaccino - Osella", "qta": "100 g" },
+            { "nome": "Primosale - Osella", "qta": "100 g" },
+            { "nome": "Stracchino - Nonno Nanni", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Grana",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Emmenthal", "qta": "20 g" },
+            { "nome": "Parmigiano", "qta": "20 g" },
+            { "nome": "Ricotta di vacca", "qta": "40 g" },
+            { "nome": "Hummus di Ceci - Bio Appetì", "qta": "20 g (1 cucchiaio da spalmare sui crackers)" }
+          ]
+        },
+        {
+          "nome": "Mela",
+          "qta": "1 Frutto (150 g)",
+          "alternative": [
+            { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Manzo (media)",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Vitello - filetto", "qta": "150 g" },
+            { "nome": "Tartare di carne", "qta": "120 g" },
+            { "nome": "Roast-beef fesa o filetto di vitello o vitellone o carpaccio di carne (SENZA GRANA)", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
+    }
+  ],
+  "Giovedì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Latte di Mandorla - Alpro Soya",
+          "qta": "200 g",
+          "alternative": [
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt greco 0% bianco", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" },
+            { "nome": "Biscotti Fibrextra Integrali - Misura", "qta": "25 g" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci - secche", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Nocciole - secche", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Riso basmati",
+          "qta": "50 g",
+          "alternative": [
+            { "nome": "Cous Cous", "qta": "50 g" },
+            { "nome": "Quinoa", "qta": "50 g" },
+            { "nome": "Farro", "qta": "50 g" },
+            { "nome": "Orzo perlato", "qta": "50 g" }
+          ]
+        },
+        {
+          "nome": "Lenticchie in scatola - scolate",
+          "qta": "1/2 Vasetto (120 g)",
+          "alternative": [
+            { "nome": "Piselli in scatola - scolati", "qta": "1/2 Vasetto (120 g)" },
+            { "nome": "Ceci in scatola - scolati", "qta": "1/2 Vasetto (120 g)" },
+            { "nome": "Fagioli in scatola", "qta": "1/2 Vasetto (120 g)" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Yogurt parzial.scremato",
+          "qta": "1 Vasetto (125 g)",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+          ]
+        },
+        {
+          "nome": "Pesca",
+          "qta": "1 Frutto e 1/2 (150 g)",
+          "alternative": [
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Orata fresca",
+          "qta": "200 g",
+          "alternative": [
+            { "nome": "Spigola filetti", "qta": "200 g" },
+            { "nome": "Merluzzo o nasello", "qta": "220 g" },
+            { "nome": "Sogliola", "qta": "200 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
+    }
+  ],
+  "Venerdì": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Yogurt greco 0% bianco",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci - secche", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Nocciole - secche", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Pane integrale",
+          "qta": "2 Fette (60 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "2 Fette (60 g)" },
+            { "nome": "Integrale - Wasa", "qta": "30 g" }
+          ]
+        },
+        {
+          "nome": "Uova di gallina - intero",
+          "qta": "120 g",
+          "alternative": [
+            { "nome": "Frittata", "qta": "120 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Grana",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Emmenthal", "qta": "20 g" },
+            { "nome": "Parmigiano", "qta": "20 g" },
+            { "nome": "Ricotta di vacca", "qta": "40 g" },
+            { "nome": "Hummus di Ceci - Bio Appetì", "qta": "20 g (1 cucnaio da spalmare sui crackers)" }
+          ]
+        },
+        {
+          "nome": "Mela",
+          "qta": "1 Frutto (150 g)",
+          "alternative": [
+            { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Prosciutto crudo magro",
+          "qta": "80 g",
+          "alternative": [
+            { "nome": "Petto di pollo", "qta": "150 g" },
+            { "nome": "Tacchino fesa", "qta": "150 g" },
+            { "nome": "Pollo - sovracoscio - senza pelle", "qta": "150 g" },
+            { "nome": "Pollo coscia senza pelle", "qta": "150 g" },
+            { "nome": "Coniglio magro", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Melone",
+          "qta": "2 Fette (200 g)",
+          "alternative": [
+            { "nome": "Verdure fresche (media)", "qta": "200 g" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
+    }
+  ],
+  "Sabato": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Latte di Mandorla - Alpro Soya",
+          "qta": "200 g",
+          "alternative": [
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt greco 0% bianco", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" },
+            { "nome": "Biscotti Fibrextra Integrali - Misura", "qta": "25 g" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci secche", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Nocciole secche", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Pasta di semola integrale",
+          "qta": "3/4 di Piatto (60 g)",
+          "alternative": [
+            { "nome": "Pasta integrale al pomodoro fresco", "qta": "60 g" },
+            { "nome": "Cous Cous", "qta": "60 g" },
+            { "nome": "Riso basmati", "qta": "60 g" }
+          ]
+        },
+        {
+          "nome": "Salmone fresco",
+          "qta": "130 g",
+          "alternative": [
+            { "nome": "Sogliola", "qta": "200 g" },
+            { "nome": "Merluzzo o nasello", "qta": "200 g" },
+            { "nome": "Spigola filetti", "qta": "180 g" },
+            { "nome": "Orata fresca", "qta": "180 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Yogurt parzial.scremato",
+          "qta": "1 Vasetto (125 g)",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Cioccolato fondente 85%", "qta": "10 g" }
+          ]
+        },
+        {
+          "nome": "Pesca",
+          "qta": "1 Frutto e 1/2 (150 g)",
+          "alternative": [
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Tacchino - fesa",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Pollo - sovracoscio - senza pelle", "qta": "150 g" },
+            { "nome": "Pollo coscia - senza pelle", "qta": "150 g" },
+            { "nome": "Petto di pollo", "qta": "150 g" },
+            { "nome": "Coniglio magro", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
+    }
+  ],
+  "Domenica": [
+    {
+      "pasto": "COLAZIONE",
+      "alimenti": [
+        {
+          "nome": "Yogurt greco 0% bianco",
+          "qta": "150 g",
+          "alternative": [
+            { "nome": "Kefir bianco naturale", "qta": "150 g" },
+            { "nome": "Yogurt parzial.scremato", "qta": "1 Vasetto (150 g)" },
+            { "nome": "Latte di Mandorla - Alpro Soya", "qta": "200 g" },
+            { "nome": "Latte di avena", "qta": "200 g" },
+            { "nome": "Skyr bianco naturale", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Pane integrale",
+          "qta": "1 Fetta e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Pane di segale", "qta": "1 Fetta e 1/2 (40 g)" },
+            { "nome": "Cornflakes", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fiocchi di riso", "qta": "3 Cucchiai (30 g)" },
+            { "nome": "Fette biscottate integrali", "qta": "3 Fette (30 g)" }
+          ]
+        },
+        {
+          "nome": "Marmellata - Rigoni di Asiago",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Mirtilli", "qta": "100 g" },
+            { "nome": "Kiwi", "qta": "1 Frutto (100 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto (100 g)" },
+            { "nome": "Lamponi", "qta": "100 g" }
+          ]
+        },
+        {
+          "nome": "Caffe' in tazza",
+          "qta": "1 Tazzina e 1/2 (40 g)",
+          "alternative": [
+            { "nome": "Te' in tazza", "qta": "1 Tazza e 1/2 (250 g)" },
+            { "nome": "Tisana in tazza", "qta": "1 Tazza (250 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO MATT.",
+      "alimenti": [
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso della mattina"
+        },
+        {
+          "nome": "Mandorle dolci - secche",
+          "qta": "15 g",
+          "alternative": [
+            { "nome": "Noci - secche", "qta": "15 g" },
+            { "nome": "Noci pecan", "qta": "15 g" },
+            { "nome": "Nocciole - secche", "qta": "15 g" },
+            { "nome": "Pistacchi", "qta": "15 g" },
+            { "nome": "Anacardi", "qta": "15 g" },
+            { "nome": "Macadamia", "qta": "15 g" }
+          ]
+        },
+        {
+          "nome": "Albicocche",
+          "qta": "3 Frutti (150 g)",
+          "alternative": [
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Mela", "qta": "1 Frutto (150 g)" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        }
+      ]
+    },
+    {
+      "pasto": "PRANZO",
+      "alimenti": [
+        {
+          "nome": "Patate",
+          "qta": "200 g",
+          "alternative": [
+            { "nome": "Pasta integrale al pomodoro fresco", "qta": "60 g" },
+            { "nome": "Riso basmati", "qta": "60 g" }
+          ]
+        },
+        {
+          "nome": "Hamburger - Fileni",
+          "qta": "120 g",
+          "alternative": [
+            { "nome": "Polpette", "qta": "130 g" },
+            { "nome": "Petto di pollo", "qta": "150 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "MERENDA",
+      "alimenti": [
+        {
+          "nome": "Grana",
+          "qta": "20 g",
+          "alternative": [
+            { "nome": "Emmenthal", "qta": "20 g" },
+            { "nome": "Parmigiano", "qta": "20 g" },
+            { "nome": "Ricotta di vacca", "qta": "40 g" },
+            { "nome": "Hummus di Ceci - Bio Appetì", "qta": "20 g (1 cucchiaio da spalmare sui crackers)" }
+          ]
+        },
+        {
+          "nome": "Mela",
+          "qta": "1 Frutto (150 g)",
+          "alternative": [
+            { "nome": "Crackers Integrali - Misura", "qta": "35 g" },
+            { "nome": "Albicocche", "qta": "3 Frutti (150 g)" },
+            { "nome": "Pesca", "qta": "1 Frutto e 1/2 (150 g)" },
+            { "nome": "Ciliege", "qta": "150 g" },
+            { "nome": "Kiwi", "qta": "2 Frutti (150 g)" },
+            { "nome": "Banane", "qta": "1 Frutto (120 g)" },
+            { "nome": "Lamponi", "qta": "150 g" },
+            { "nome": "Mirtilli", "qta": "150 g" },
+            { "nome": "Prugne", "qta": "3 Frutti (150 g)" },
+            { "nome": "Uva", "qta": "120 g" },
+            { "nome": "Melone", "qta": "1 Fetta e 1/2 (150 g)" }
+          ]
+        },
+        {
+          "nome": "Acqua",
+          "qta": "500 g",
+          "nota": "da bere nel corso del pomeriggio"
+        }
+      ]
+    },
+    {
+      "pasto": "CENA",
+      "alimenti": [
+        {
+          "nome": "Merluzzo o nasello",
+          "qta": "220 g",
+          "alternative": [
+            { "nome": "Sogliola", "qta": "200 g" },
+            { "nome": "Polpo", "qta": "250 g" },
+            { "nome": "Orata fresca", "qta": "200 g" },
+            { "nome": "Seppia", "qta": "250 g" },
+            { "nome": "Spigola filetti", "qta": "200 g" },
+            { "nome": "Calamaro", "qta": "250 g" }
+          ]
+        },
+        {
+          "nome": "Verdure fresche (media)",
+          "qta": "200 g"
+        }
+      ]
+    },
+    {
+      "pasto": "SPUNTINO SER.",
+      "alimenti": [
+        {
+          "nome": "Tisana in tazza",
+          "qta": "1 Tazza (250 g)",
+          "nota": "una camomilla o tisana se gradita dopo cena senza zucchero"
+        }
+      ]
+    },
+    {
+      "pasto": "DURANTE LA GIORNATA",
+      "alimenti": [
+        {
+          "nome": "Olio di oliva extra vergine",
+          "qta": "2 Cucchiai (20 g)"
+        }
+      ]
+    }
+  ]
 }
