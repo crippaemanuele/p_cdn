@@ -1,0 +1,146 @@
+{
+    "Giorno ON": [
+        {
+            "pasto": "Colazione (Opzione 1 - Bowl)",
+            "alimenti": [
+                { "nome": "Yogurt greco 0% senza lattosio", "qta": "200 g" },
+                { "nome": "Cornflakes / Avena / Crema di riso / Quinoa flakes (o 80g Fiocchi di riso)", "qta": "70 g" },
+                { "nome": "Frutta fresca", "qta": "150 g" },
+                { "nome": "Crema nocciole 100%", "qta": "20 g" },
+                { "nome": "Cannella", "qta": "10 g" }
+            ]
+        },
+        {
+            "pasto": "Colazione (Opzione 2 - Salata)",
+            "alimenti": [
+                { "nome": "Uova intere", "qta": "100 g" },
+                { "nome": "Albume d'uovo", "qta": "150 g" },
+                { "nome": "Pane integrale", "qta": "60 g" },
+                { "nome": "Verdure / Ortaggi", "qta": "100 g" },
+                { "nome": "Frutta fresca", "qta": "150 g" }
+            ]
+        },
+        {
+            "pasto": "Colazione (Opzione 3 - Pancake)",
+            "alimenti": [
+                { "nome": "Farina di avena aromatizzata", "qta": "60 g" },
+                { "nome": "Albume d'uovo", "qta": "150 g" },
+                { "nome": "Bevanda ad avena", "qta": "100 g" },
+                { "nome": "Marmellata fit (o 10g Sciroppo d'acero)", "qta": "20 g" },
+                { "nome": "Crema nocciole 100%", "qta": "15 g" }
+            ]
+        },
+        {
+            "pasto": "Spuntino Ore 11",
+            "alimenti": [
+                { "nome": "Frutta fresca", "qta": "250 g" },
+                { "nome": "Frutta secca", "qta": "20 g" }
+            ]
+        },
+        {
+            "pasto": "Spuntino Ore 13",
+            "alimenti": [
+                { "nome": "Pane integrale (o 60g Gallette di riso)", "qta": "80 g" },
+                { "nome": "Fesa di tacchino (o Bresaola max 2v / Tonno nat.)", "qta": "50 g" },
+                { "nome": "Pomodori", "qta": "100 g" }
+            ]
+        },
+        {
+            "pasto": "Pranzo Ore 15 (Pre-Workout)",
+            "alimenti": [
+                { "nome": "Riso arborio (o 180g Gnocchi / 60g Gallette / 290g Patate)", "qta": "70 g" },
+                { "nome": "Petto di pollo (o 140g Nasello/Merluzzo / 110g Vitello / 100g Tacchino)", "qta": "100 g" },
+                { "nome": "Olio extravergine d'oliva", "qta": "10 g" },
+                { "nome": "Verdure o ortaggi", "qta": "150 g" }
+            ]
+        },
+        {
+            "pasto": "Spuntino Post-Workout",
+            "alimenti": [
+                { "nome": "Whey Pure Professional Tsunami", "qta": "20 g" },
+                { "nome": "Crema di riso", "qta": "40 g" }
+            ]
+        },
+        {
+            "pasto": "Cena",
+            "alimenti": [
+                { "nome": "Riso arborio/nero (o 130g Pasta legumi / 120g Pasta semola int. / 310g Gnocchi / 500g Patate)", "qta": "120 g" },
+                { "nome": "Petto di pollo (o 120g Branzino / 140g Merluzzo / 150g Fiocchi di latte / 2 Uova+100g Albume)", "qta": "100 g" },
+                { "nome": "Olio extravergine d'oliva (o 50g Avocado / 50g Olive nere)", "qta": "20 g" },
+                { "nome": "Verdure o ortaggi", "qta": "150 g" }
+            ]
+        }
+    ],
+    "Giorno OFF": [
+        {
+            "pasto": "Colazione (Opzione 1 - Bowl)",
+            "alimenti": [
+                { "nome": "Yogurt greco 0% senza lattosio", "qta": "200 g" },
+                { "nome": "Fiocchi d'avena / Crema di riso / Quinoa flakes (o 60g Fiocchi di riso)", "qta": "50 g" },
+                { "nome": "Frutta fresca", "qta": "150 g" },
+                { "nome": "Crema nocciole 100%", "qta": "15 g" },
+                { "nome": "Cannella", "qta": "10 g" }
+            ]
+        },
+        {
+            "pasto": "Colazione (Opzione 2 - Salata)",
+            "alimenti": [
+                { "nome": "Uova intere", "qta": "100 g" },
+                { "nome": "Albume d'uovo", "qta": "150 g" },
+                { "nome": "Pane integrale", "qta": "60 g" },
+                { "nome": "Verdure / Ortaggi", "qta": "100 g" },
+                { "nome": "Frutta fresca", "qta": "150 g" }
+            ]
+        },
+        {
+            "pasto": "Colazione (Opzione 3 - Pancake)",
+            "alimenti": [
+                { "nome": "Farina di avena aromatizzata", "qta": "60 g" },
+                { "nome": "Albume d'uovo", "qta": "150 g" },
+                { "nome": "Bevanda ad avena", "qta": "100 g" },
+                { "nome": "Marmellata fit (o 10g Sciroppo d'acero)", "qta": "20 g" },
+                { "nome": "Crema nocciole 100%", "qta": "15 g" }
+            ]
+        },
+        {
+            "pasto": "Spuntino Ore 11",
+            "alimenti": [
+                { "nome": "Frutta fresca", "qta": "200 g" },
+                { "nome": "Frutta secca", "qta": "20 g" }
+            ]
+        },
+        {
+            "pasto": "Pranzo",
+            "alimenti": [
+                { "nome": "Riso arborio/nero (o 90g Pasta legumi / 90g Pasta int. / 230g Gnocchi / 370g Patate)", "qta": "90 g" },
+                { "nome": "Petto di pollo (o 150g Branzino / 170g Merluzzo / 180g Fiocchi di latte / 80g Bresaola)", "qta": "120 g" },
+                { "nome": "Olio extravergine d'oliva (o 50g Avocado / 50g Olive nere)", "qta": "20 g" },
+                { "nome": "Verdure o ortaggi", "qta": "150 g" }
+            ]
+        },
+        {
+            "pasto": "Spuntino Pomeridiano (Opzione 1)",
+            "alimenti": [
+                { "nome": "Yogurt greco 0% senza lattosio", "qta": "150 g" },
+                { "nome": "Crema di riso / Cornflakes / Gallette di riso", "qta": "40 g" },
+                { "nome": "Frutta fresca", "qta": "200 g" }
+            ]
+        },
+        {
+            "pasto": "Spuntino Pomeridiano (Opzione 2)",
+            "alimenti": [
+                { "nome": "Pane integrale (o 40g Gallette di riso)", "qta": "60 g" },
+                { "nome": "Fesa di tacchino (o Bresaola max 2v / Tonno nat.)", "qta": "70 g" }
+            ]
+        },
+        {
+            "pasto": "Cena",
+            "alimenti": [
+                { "nome": "Riso arborio/nero (o 90g Pasta legumi / 90g Pasta int. / 230g Gnocchi / 370g Patate)", "qta": "90 g" },
+                { "nome": "Petto di pollo (o 150g Branzino / 170g Merluzzo / 180g Fiocchi di latte / 2 Uova+100g Albume)", "qta": "120 g" },
+                { "nome": "Olio extravergine d'oliva (o 50g Avocado / 50g Olive nere)", "qta": "20 g" },
+                { "nome": "Verdure o ortaggi", "qta": "150 g" }
+            ]
+        }
+    ]
+}
