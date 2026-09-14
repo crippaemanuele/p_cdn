@@ -50,48 +50,70 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     // ==========================================================
-    // ORARI DEI PASTI
-    // Devono corrispondere ai nomi presenti nel JSON
+    // ORARI DEI PASTI PREDEFINITI
     // ==========================================================
 
     const mealTimes = {
-
         "COLAZIONE": "07:30",
-
         "SPUNTINO MATT.": "10:30",
-
         "PRANZO": "13:00",
-
         "MERENDA": "16:30",
-
         "CENA": "20:00",
-
         "SPUNTINO SER.": "22:00"
-
     };
 
 
     // ==========================================================
-    // ICONE
+    // ICONE PREDEFINITE
     // ==========================================================
 
     const mealIcons = {
-
         "COLAZIONE": "☕",
-
         "SPUNTINO MATT.": "🍎",
-
         "PRANZO": "🍽️",
-
         "MERENDA": "🥪",
-
         "CENA": "🌙",
-
         "SPUNTINO SER.": "🍫",
-
         "DURANTE LA GIORNATA": "💧"
-
     };
+
+
+    // ==========================================================
+    // FUNZIONI DI MAPPA ORARI E ICONE
+    // ==========================================================
+
+    function getMealIcon(pastoName) {
+        if (!pastoName) return "🍴";
+        if (mealIcons[pastoName]) return mealIcons[pastoName];
+
+        const upper = pastoName.toUpperCase();
+        if (upper.includes("COLAZIONE")) return "☕";
+        if (upper.includes("ORE 11")) return "🍎";
+        if (upper.includes("ORE 13")) return "🥪";
+        if (upper.includes("PRANZO")) return "🍽️";
+        if (upper.includes("POST-WORKOUT") || upper.includes("POMERIDIANO") || upper.includes("MERENDA")) return "🥤";
+        if (upper.includes("CENA")) return "🌙";
+        if (upper.includes("SPUNTINO")) return "🍎";
+
+        return "🍴";
+    }
+
+    function getMealTime(pastoName) {
+        if (!pastoName) return null;
+        if (mealTimes[pastoName]) return mealTimes[pastoName];
+
+        const upper = pastoName.toUpperCase();
+        if (upper.includes("COLAZIONE")) return "07:30";
+        if (upper.includes("ORE 11")) return "11:00";
+        if (upper.includes("ORE 13")) return "13:00";
+        if (upper.includes("PRANZO ORE 15") || upper.includes("PRE-WORKOUT")) return "15:00";
+        if (upper.includes("PRANZO")) return "13:00";
+        if (upper.includes("POST-WORKOUT")) return "17:30";
+        if (upper.includes("POMERIDIANO")) return "17:00";
+        if (upper.includes("CENA")) return "20:00";
+
+        return null;
+    }
 
 
     // ==========================================================
@@ -99,50 +121,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ==========================================================
 
     try {
-
-        const response =
-            await fetch("dieta.json");
-
+        const response = await fetch("dieta.json");
 
         if (!response.ok) {
-
-            throw new Error(
-                "Impossibile caricare dieta.json"
-            );
-
+            throw new Error("Impossibile caricare dieta.json");
         }
 
-
-        pianoAlimentare =
-            await response.json();
-
+        pianoAlimentare = await response.json();
 
     } catch (error) {
-
         console.error(error);
 
-
         mealView.innerHTML = `
-
             <div class="error-card">
-
-                <strong>
-                    ⚠️ Errore nel caricamento
-                </strong>
-
-                <p>
-                    Controlla che
-                    <code>dieta.json</code>
-                    si trovi nella stessa cartella
-                    di index.html.
-                </p>
-
+                <strong>⚠️ Errore nel caricamento</strong>
+                <p>Controlla che <code>dieta.json</code> si trovi nella stessa cartella di index.html.</p>
             </div>
         `;
 
-
         return;
-
     }
 
 
@@ -150,94 +147,59 @@ document.addEventListener("DOMContentLoaded", async () => {
     // FUNZIONI DATA
     // ==========================================================
 
-    function getNomeGiorno(
-        date = new Date()
-    ) {
-
+    function getNomeGiorno(date = new Date()) {
         const giorni = [
-
             "Domenica",
-
             "Lunedì",
-
             "Martedì",
-
             "Mercoledì",
-
             "Giovedì",
-
             "Venerdì",
-
             "Sabato"
-
         ];
 
-
-        return giorni[
-            date.getDay()
-        ];
-
+        return giorni[date.getDay()];
     }
 
+    function getGiornoCorrente(date = new Date()) {
+        const nomeGiorno = getNomeGiorno(date);
+        if (pianoAlimentare[nomeGiorno]) {
+            return nomeGiorno;
+        }
+        if (pianoAlimentare["Giorno ON"]) {
+            return "Giorno ON";
+        }
+        const keys = Object.keys(pianoAlimentare);
+        return keys.length > 0 ? keys[0] : "Giorno ON";
+    }
 
-    function formatDate(
-        date = new Date()
-    ) {
-
+    function formatDate(date = new Date()) {
         return new Intl.DateTimeFormat(
-
             "it-IT",
-
             {
                 weekday: "long",
-
                 day: "numeric",
-
                 month: "long"
             }
-
         ).format(date);
-
     }
 
-
-    function formatTime(
-        date = new Date()
-    ) {
-
+    function formatTime(date = new Date()) {
         return new Intl.DateTimeFormat(
-
             "it-IT",
-
             {
                 hour: "2-digit",
-
                 minute: "2-digit"
             }
-
         ).format(date);
-
     }
 
-
     function dateToKey(date) {
-
-        const yyyy =
-            date.getFullYear();
-
-        const mm =
-            String(
-                date.getMonth() + 1
-            ).padStart(2, "0");
-
-        const dd =
-            String(
-                date.getDate()
-            ).padStart(2, "0");
-
+        const yyyy = date.getFullYear();
+        const mm = String(date.getMonth() + 1).padStart(2, "0");
+        const dd = String(date.getDate()).padStart(2, "0");
 
         return `${yyyy}-${mm}-${dd}`;
-
     }
 
 
@@ -246,133 +208,70 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ==========================================================
 
     function timeToMinutes(time) {
-
-        const [h, m] =
-            time
-                .split(":")
-                .map(Number);
-
-
+        const [h, m] = time.split(":").map(Number);
         return h * 60 + m;
-
     }
 
+    function getNextMeal(date = new Date()) {
+        const currentMinutes = date.getHours() * 60 + date.getMinutes();
 
-    function getNextMeal(
-        date = new Date()
-    ) {
+        const pastiGiorno = pianoAlimentare[giornoSelezionato] || [];
+        const entries = [];
 
-        const currentMinutes =
-
-            date.getHours() * 60 +
-
-            date.getMinutes();
-
-
-        const entries =
-
-            Object.entries(mealTimes)
-
-                .map(
-
-                    ([name, time]) => ({
-
-                        name,
-
-                        time,
-
-                        minutes:
-                            timeToMinutes(time)
-
-                    })
-
-                )
-
-                .sort(
-
-                    (a, b) =>
-                        a.minutes -
-                        b.minutes
-
-                );
-
-
-        for (
-            const meal of entries
-        ) {
-
-            if (
-                meal.minutes >=
-                currentMinutes
-            ) {
-
-                return {
-
-                    ...meal,
-
-                    diff:
-                        meal.minutes -
-                        currentMinutes,
-
-                    isTomorrow:
-                        false
-
-                };
-
+        pastiGiorno.forEach(item => {
+            const timeStr = getMealTime(item.pasto);
+            if (timeStr) {
+                entries.push({
+                    name: item.pasto,
+                    time: timeStr,
+                    minutes: timeToMinutes(timeStr)
+                });
             }
+        });
 
+        if (entries.length === 0) {
+            Object.entries(mealTimes).forEach(([name, time]) => {
+                entries.push({
+                    name,
+                    time,
+                    minutes: timeToMinutes(time)
+                });
+            });
         }
 
+        entries.sort((a, b) => a.minutes - b.minutes);
 
-        const firstMeal =
-            entries[0];
+        for (const meal of entries) {
+            if (meal.minutes >= currentMinutes) {
+                return {
+                    ...meal,
+                    diff: meal.minutes - currentMinutes,
+                    isTomorrow: false
+                };
+            }
+        }
 
+        const firstMeal = entries[0];
 
         return {
-
             ...firstMeal,
-
-            diff:
-
-                (24 * 60 -
-                    currentMinutes)
-
-                +
-
-                firstMeal.minutes,
-
-            isTomorrow:
-                true
-
+            diff: (24 * 60 - currentMinutes) + firstMeal.minutes,
+            isTomorrow: true
         };
-
     }
 
-
     function updateClock() {
-
-        const now =
-            new Date();
-
+        const now = new Date();
 
         if (currentDateEl) {
-
-            currentDateEl.textContent =
-                formatDate(now);
-
+            currentDateEl.textContent = formatDate(now);
         }
-
 
         if (currentTimeEl) {
-
-            currentTimeEl.textContent =
-                formatTime(now);
-
+            currentTimeEl.textContent = formatTime(now);
         }
 
-
         updateNextMealBanner(now);
-
     }
 
 
@@ -380,106 +279,43 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BANNER PROSSIMO PASTO
     // ==========================================================
 
-    function updateNextMealBanner(
-        now = new Date()
-    ) {
-
+    function updateNextMealBanner(now = new Date()) {
         if (!nextMealBanner) {
             return;
         }
 
+        const next = getNextMeal(now);
 
-        const next =
-            getNextMeal(now);
-
-
-        const hours =
-            Math.floor(
-                next.diff / 60
-            );
-
-
-        const minutes =
-            next.diff % 60;
-
+        const hours = Math.floor(next.diff / 60);
+        const minutes = next.diff % 60;
 
         let remaining = "";
 
-
         if (next.diff === 0) {
-
-            remaining =
-                "adesso";
-
+            remaining = "adesso";
+        } else if (hours > 0 && minutes > 0) {
+            remaining = `tra ${hours} h ${minutes} min`;
+        } else if (hours > 0) {
+            remaining = `tra ${hours} h`;
+        } else {
+            remaining = `tra ${minutes} min`;
         }
-
-        else if (
-            hours > 0 &&
-            minutes > 0
-        ) {
-
-            remaining =
-                `tra ${hours} h ${minutes} min`;
-
-        }
-
-        else if (hours > 0) {
-
-            remaining =
-                `tra ${hours} h`;
-
-        }
-
-        else {
-
-            remaining =
-                `tra ${minutes} min`;
-
-        }
-
 
         nextMealBanner.innerHTML = `
-
             <span class="next-meal-icon">
-
-                ${
-                    mealIcons[
-                        next.name
-                    ] || "🍴"
-                }
-
+                ${getMealIcon(next.name)}
             </span>
 
-
             <div>
-
-                <div class="next-meal-label">
-                    Pasto più prossimo
-                </div>
-
-                <div class="next-meal-name">
-
-                    ${next.name}
-
-                </div>
-
+                <div class="next-meal-label">Pasto più prossimo</div>
+                <div class="next-meal-name">${next.name}</div>
                 <div class="next-meal-time">
-
                     ${next.time}
-
-                    ${
-                        next.isTomorrow
-                            ? " · domani"
-                            : ""
-                    }
-
+                    ${next.isTomorrow ? " · domani" : ""}
                     · ${remaining}
-
                 </div>
-
             </div>
         `;
-
     }
 
 
@@ -487,123 +323,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     // LOCAL STORAGE
     // ==========================================================
 
-    /*
-        Ogni sostituzione viene salvata
-        separatamente per DATA + PASTO + ALIMENTO.
-
-        Quindi una sostituzione fatta lunedì
-        non modifica permanentemente tutti i lunedì.
-    */
-
-
-    function getStorageKey(
-        giorno,
-        pasto,
-        foodIndex
-    ) {
-
-        const dateKey =
-            dateToKey(
-                dataSelezionata
-            );
-
-
-        return (
-
-            "dieta_" +
-
-            dateKey +
-
-            "_" +
-
-            giorno +
-
-            "_" +
-
-            pasto +
-
-            "_" +
-
-            foodIndex
-
-        );
-
+    function getStorageKey(giorno, pasto, foodIndex) {
+        const dateKey = dateToKey(dataSelezionata);
+        return "dieta_" + dateKey + "_" + giorno + "_" + pasto + "_" + foodIndex;
     }
 
-
-    function saveChoice(
-        giorno,
-        pasto,
-        foodIndex,
-        choiceIndex
-    ) {
-
-        const key =
-            getStorageKey(
-                giorno,
-                pasto,
-                foodIndex
-            );
-
-
-        localStorage.setItem(
-            key,
-            String(choiceIndex)
-        );
-
+    function saveChoice(giorno, pasto, foodIndex, choiceIndex) {
+        const key = getStorageKey(giorno, pasto, foodIndex);
+        localStorage.setItem(key, String(choiceIndex));
     }
 
-
-    function getSavedChoice(
-        giorno,
-        pasto,
-        foodIndex
-    ) {
-
-        const key =
-            getStorageKey(
-                giorno,
-                pasto,
-                foodIndex
-            );
-
-
-        const value =
-            localStorage.getItem(
-                key
-            );
-
-
+    function getSavedChoice(giorno, pasto, foodIndex) {
+        const key = getStorageKey(giorno, pasto, foodIndex);
+        const value = localStorage.getItem(key);
         if (value === null) {
-
             return 0;
-
         }
-
-
         return Number(value);
-
     }
 
-
-    function removeSavedChoice(
-        giorno,
-        pasto,
-        foodIndex
-    ) {
-
-        const key =
-            getStorageKey(
-                giorno,
-                pasto,
-                foodIndex
-            );
-
-
-        localStorage.removeItem(
-            key
-        );
-
+    function removeSavedChoice(giorno, pasto, foodIndex) {
+        const key = getStorageKey(giorno, pasto, foodIndex);
+        localStorage.removeItem(key);
     }
 
 
@@ -612,158 +353,47 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ==========================================================
 
     function showToast(message) {
-
         if (!toast) {
             return;
         }
 
+        toast.textContent = message;
+        toast.classList.add("show");
 
-        toast.textContent =
-            message;
-
-
-        toast.classList.add(
-            "show"
-        );
-
-
-        setTimeout(
-
-            () => {
-
-                toast.classList.remove(
-                    "show"
-                );
-
-            },
-
-            1800
-
-        );
-
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 1800);
     }
 
 
     // ==========================================================
-    // BOTTONI DEI GIORNI
+    // BOTTONI DELLE SCHEDE (DINAMICI DAL JSON)
     // ==========================================================
 
     function buildDayButtons() {
-
         daysContainer.innerHTML = "";
 
+        const giorni = Object.keys(pianoAlimentare);
 
-        const giorni = [
+        giorni.forEach(giorno => {
+            const btn = document.createElement("button");
+            btn.className = "day-btn";
+            btn.dataset.day = giorno;
+            btn.textContent = giorno;
 
-            "Lunedì",
+            btn.addEventListener("click", () => {
+                giornoSelezionato = giorno;
+                selectDay(giorno, false);
+            });
 
-            "Martedì",
-
-            "Mercoledì",
-
-            "Giovedì",
-
-            "Venerdì",
-
-            "Sabato",
-
-            "Domenica"
-
-        ];
-
-
-        giorni.forEach(
-            giorno => {
-
-                if (
-                    !pianoAlimentare[
-                        giorno
-                    ]
-                ) {
-                    return;
-                }
-
-
-                const btn =
-                    document.createElement(
-                        "button"
-                    );
-
-
-                btn.className =
-                    "day-btn";
-
-
-                btn.dataset.day =
-                    giorno;
-
-
-                btn.textContent =
-                    giorno;
-
-
-                btn.addEventListener(
-
-                    "click",
-
-                    () => {
-
-                        giornoSelezionato =
-                            giorno;
-
-
-                        /*
-                            Quando si usa la barra
-                            settimanale teniamo la
-                            settimana della data
-                            selezionata.
-                        */
-
-                        selectDay(
-                            giorno,
-                            false
-                        );
-
-                    }
-
-                );
-
-
-                daysContainer.appendChild(
-                    btn
-                );
-
-            }
-        );
-
+            daysContainer.appendChild(btn);
+        });
     }
 
-
-    function updateActiveDayButton(
-        giorno
-    ) {
-
-        document
-            .querySelectorAll(
-                ".day-btn"
-            )
-            .forEach(
-
-                btn => {
-
-                    btn.classList.toggle(
-
-                        "active",
-
-                        btn.dataset.day ===
-                        giorno
-
-                    );
-
-                }
-
-            );
-
+    function updateActiveDayButton(giorno) {
+        document.querySelectorAll(".day-btn").forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.day === giorno);
+        });
     }
 
 
@@ -771,68 +401,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     // RESTITUISCE ALIMENTO SELEZIONATO
     // ==========================================================
 
-    function getSelectedFood(
-        alimento,
-        selectedIndex
-    ) {
-
-        /*
-            Indice 0 = alimento originale.
-
-            Indice 1 = prima alternativa.
-            Indice 2 = seconda alternativa.
-            ecc.
-        */
-
-
+    function getSelectedFood(alimento, selectedIndex) {
         if (selectedIndex === 0) {
-
             return {
-
-                nome:
-                    alimento.nome,
-
-                qta:
-                    alimento.qta,
-
-                nota:
-                    alimento.nota || null
-
+                nome: alimento.nome,
+                qta: alimento.qta,
+                nota: alimento.nota || null
             };
-
         }
 
-
-        const alternative =
-            alimento.alternative || [];
-
-
-        const selected =
-            alternative[
-                selectedIndex - 1
-            ];
-
+        const alternative = alimento.alternative || [];
+        const selected = alternative[selectedIndex - 1];
 
         if (!selected) {
-
             return {
-
-                nome:
-                    alimento.nome,
-
-                qta:
-                    alimento.qta,
-
-                nota:
-                    alimento.nota || null
-
+                nome: alimento.nome,
+                qta: alimento.qta,
+                nota: alimento.nota || null
             };
-
         }
 
-
         return selected;
-
     }
 
 
@@ -840,414 +429,114 @@ document.addEventListener("DOMContentLoaded", async () => {
     // CREA RIGA ALIMENTO
     // ==========================================================
 
-    function createFoodItem(
+    function createFoodItem(alimento, giorno, pasto, foodIndex) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "food-wrapper";
 
-        alimento,
+        let selectedIndex = getSavedChoice(giorno, pasto, foodIndex);
+        const selectedFood = getSelectedFood(alimento, selectedIndex);
 
-        giorno,
-
-        pasto,
-
-        foodIndex
-
-    ) {
-
-        const wrapper =
-            document.createElement(
-                "div"
-            );
-
-
-        wrapper.className =
-            "food-wrapper";
-
-
-        let selectedIndex =
-            getSavedChoice(
-
-                giorno,
-
-                pasto,
-
-                foodIndex
-
-            );
-
-
-        const selectedFood =
-            getSelectedFood(
-
-                alimento,
-
-                selectedIndex
-
-            );
-
-
-        // --------------------------------------
-        // RIGA PRINCIPALE
-        // --------------------------------------
-
-        const row =
-            document.createElement(
-                "div"
-            );
-
-
-        row.className =
-            "food-item";
-
+        const row = document.createElement("div");
+        row.className = "food-item";
 
         if (selectedIndex > 0) {
-
-            row.classList.add(
-                "food-modified"
-            );
-
+            row.classList.add("food-modified");
         }
 
+        const info = document.createElement("div");
+        info.className = "food-info";
 
-        const info =
-            document.createElement(
-                "div"
-            );
-
-
-        info.className =
-            "food-info";
-
-
-        const name =
-            document.createElement(
-                "div"
-            );
-
-
-        name.className =
-            "food-name";
-
-
-        name.textContent =
-            selectedFood.nome;
-
-
+        const name = document.createElement("div");
+        name.className = "food-name";
+        name.textContent = selectedFood.nome;
         info.appendChild(name);
 
-
         if (selectedIndex > 0) {
-
-            const changed =
-                document.createElement(
-                    "div"
-                );
-
-
-            changed.className =
-                "alternative-badge";
-
-
-            changed.textContent =
-                "✓ alternativa scelta";
-
-
-            info.appendChild(
-                changed
-            );
-
+            const changed = document.createElement("div");
+            changed.className = "alternative-badge";
+            changed.textContent = "✓ alternativa scelta";
+            info.appendChild(changed);
         }
-
 
         if (selectedFood.nota) {
-
-            const note =
-                document.createElement(
-                    "div"
-                );
-
-
-            note.className =
-                "food-note";
-
-
-            note.textContent =
-                selectedFood.nota;
-
-
+            const note = document.createElement("div");
+            note.className = "food-note";
+            note.textContent = selectedFood.nota;
             info.appendChild(note);
-
         }
 
+        const right = document.createElement("div");
+        right.className = "food-right";
 
-        const right =
-            document.createElement(
-                "div"
+        const quantity = document.createElement("span");
+        quantity.className = "food-quantity";
+        quantity.textContent = selectedFood.qta;
+        right.appendChild(quantity);
+
+        const alternatives = alimento.alternative || [];
+
+        if (alternatives.length > 0) {
+            const changeBtn = document.createElement("button");
+            changeBtn.className = "change-food-btn";
+            changeBtn.innerHTML = "🔄 Cambia";
+            right.appendChild(changeBtn);
+
+            const panel = document.createElement("div");
+            panel.className = "alternatives-panel";
+
+            const title = document.createElement("div");
+            title.className = "alternatives-title";
+            title.textContent = "Scegli un'alternativa";
+            panel.appendChild(title);
+
+            const original = createAlternativeButton(
+                alimento.nome,
+                alimento.qta,
+                selectedIndex === 0,
+                true
             );
 
+            original.addEventListener("click", () => {
+                saveChoice(giorno, pasto, foodIndex, 0);
+                mostraGiorno(giorno, false);
+                showToast("Pasto aggiornato ✓");
+            });
 
-        right.className =
-            "food-right";
+            panel.appendChild(original);
 
-
-        const quantity =
-            document.createElement(
-                "span"
-            );
-
-
-        quantity.className =
-            "food-quantity";
-
-
-        quantity.textContent =
-            selectedFood.qta;
-
-
-        right.appendChild(
-            quantity
-        );
-
-
-        // --------------------------------------
-        // SE ESISTONO ALTERNATIVE
-        // --------------------------------------
-
-        const alternatives =
-            alimento.alternative || [];
-
-
-        if (
-            alternatives.length > 0
-        ) {
-
-            const changeBtn =
-                document.createElement(
-                    "button"
+            alternatives.forEach((alt, altIndex) => {
+                const index = altIndex + 1;
+                const button = createAlternativeButton(
+                    alt.nome,
+                    alt.qta,
+                    selectedIndex === index,
+                    false
                 );
 
-
-            changeBtn.className =
-                "change-food-btn";
-
-
-            changeBtn.innerHTML =
-                "🔄 Cambia";
-
-
-            right.appendChild(
-                changeBtn
-            );
-
-
-            // ----------------------------------
-            // PANNELLO ALTERNATIVE
-            // ----------------------------------
-
-            const panel =
-                document.createElement(
-                    "div"
-                );
-
-
-            panel.className =
-                "alternatives-panel";
-
-
-            const title =
-                document.createElement(
-                    "div"
-                );
-
-
-            title.className =
-                "alternatives-title";
-
-
-            title.textContent =
-                "Scegli un'alternativa";
-
-
-            panel.appendChild(
-                title
-            );
-
-
-            // ----------------------------------
-            // ORIGINALE
-            // ----------------------------------
-
-            const original =
-                createAlternativeButton(
-
-                    alimento.nome,
-
-                    alimento.qta,
-
-                    selectedIndex === 0,
-
-                    true
-
-                );
-
-
-            original.addEventListener(
-
-                "click",
-
-                () => {
-
-                    saveChoice(
-
-                        giorno,
-
-                        pasto,
-
-                        foodIndex,
-
-                        0
-
-                    );
-
-
-                    mostraGiorno(
-                        giorno,
-                        false
-                    );
-
-
-                    showToast(
-                        "Pasto aggiornato ✓"
-                    );
-
-                }
-
-            );
-
-
-            panel.appendChild(
-                original
-            );
-
-
-            // ----------------------------------
-            // ALTERNATIVE
-            // ----------------------------------
-
-            alternatives.forEach(
-
-                (alt, altIndex) => {
-
-                    const index =
-                        altIndex + 1;
-
-
-                    const button =
-                        createAlternativeButton(
-
-                            alt.nome,
-
-                            alt.qta,
-
-                            selectedIndex ===
-                                index,
-
-                            false
-
-                        );
-
-
-                    button.addEventListener(
-
-                        "click",
-
-                        () => {
-
-                            saveChoice(
-
-                                giorno,
-
-                                pasto,
-
-                                foodIndex,
-
-                                index
-
-                            );
-
-
-                            mostraGiorno(
-                                giorno,
-                                false
-                            );
-
-
-                            showToast(
-                                "Alternativa selezionata ✓"
-                            );
-
-                        }
-
-                    );
-
-
-                    panel.appendChild(
-                        button
-                    );
-
-                }
-
-            );
-
-
-            changeBtn.addEventListener(
-
-                "click",
-
-                event => {
-
-                    event.stopPropagation();
-
-
-                    panel.classList.toggle(
-                        "open"
-                    );
-
-                }
-
-            );
-
-
-            wrapper.appendChild(
-                row
-            );
-
-
-            wrapper.appendChild(
-                panel
-            );
-
+                button.addEventListener("click", () => {
+                    saveChoice(giorno, pasto, foodIndex, index);
+                    mostraGiorno(giorno, false);
+                    showToast("Alternativa selezionata ✓");
+                });
+
+                panel.appendChild(button);
+            });
+
+            changeBtn.addEventListener("click", event => {
+                event.stopPropagation();
+                panel.classList.toggle("open");
+            });
+
+            wrapper.appendChild(row);
+            wrapper.appendChild(panel);
+        } else {
+            wrapper.appendChild(row);
         }
 
-        else {
-
-            wrapper.appendChild(
-                row
-            );
-
-        }
-
-
-        row.appendChild(
-            info
-        );
-
-
-        row.appendChild(
-            right
-        );
-
+        row.appendChild(info);
+        row.appendChild(right);
 
         return wrapper;
-
     }
 
 
@@ -1255,69 +544,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BOTTONE ALTERNATIVA
     // ==========================================================
 
-    function createAlternativeButton(
-
-        nome,
-
-        qta,
-
-        selected,
-
-        original
-
-    ) {
-
-        const button =
-            document.createElement(
-                "button"
-            );
-
-
-        button.className =
-            "alternative-option";
-
+    function createAlternativeButton(nome, qta, selected, original) {
+        const button = document.createElement("button");
+        button.className = "alternative-option";
 
         if (selected) {
-
-            button.classList.add(
-                "selected"
-            );
-
+            button.classList.add("selected");
         }
 
-
         button.innerHTML = `
-
             <span class="alternative-option-text">
-
-                <strong>
-                    ${nome}
-                </strong>
-
-                ${
-                    original
-                        ? `
-                            <small>
-                                alimento previsto
-                            </small>
-                          `
-                        : ""
-                }
-
+                <strong>${nome}</strong>
+                ${original ? `<small>alimento previsto</small>` : ""}
             </span>
-
-
-            <span class="alternative-option-qta">
-
-                ${qta}
-
-            </span>
-
+            <span class="alternative-option-qta">${qta}</span>
         `;
 
-
         return button;
-
     }
 
 
@@ -1325,121 +568,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     // GENERA VARIANTE AUTOMATICA DEL PASTO
     // ==========================================================
 
-    function generateMealAlternative(
+    function generateMealAlternative(giorno, pasto) {
+        const pasti = pianoAlimentare[giorno];
+        if (!pasti) return;
 
-        giorno,
-
-        pasto
-
-    ) {
-
-        const pasti =
-            pianoAlimentare[
-                giorno
-            ];
-
-
-        const meal =
-            pasti.find(
-
-                item =>
-                    item.pasto ===
-                    pasto
-
-            );
-
-
-        if (!meal) {
-            return;
-        }
-
+        const meal = pasti.find(item => item.pasto === pasto);
+        if (!meal) return;
 
         let changed = 0;
 
+        meal.alimenti.forEach((alimento, foodIndex) => {
+            const alternatives = alimento.alternative || [];
+            if (alternatives.length === 0) return;
 
-        meal.alimenti.forEach(
+            const randomIndex = Math.floor(Math.random() * alternatives.length) + 1;
+            saveChoice(giorno, pasto, foodIndex, randomIndex);
+            changed++;
+        });
 
-            (alimento, foodIndex) => {
-
-                const alternatives =
-                    alimento.alternative || [];
-
-
-                if (
-                    alternatives.length === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                /*
-                    Possibili scelte:
-
-                    0 = alimento originale
-                    1...n = alternative
-
-                    Per "crea alternativa"
-                    privilegiamo una vera alternativa,
-                    quindi scegliamo 1...n.
-                */
-
-
-                const randomIndex =
-
-                    Math.floor(
-
-                        Math.random() *
-                        alternatives.length
-
-                    )
-
-                    + 1;
-
-
-                saveChoice(
-
-                    giorno,
-
-                    pasto,
-
-                    foodIndex,
-
-                    randomIndex
-
-                );
-
-
-                changed++;
-
-            }
-
-        );
-
-
-        mostraGiorno(
-            giorno,
-            false
-        );
-
+        mostraGiorno(giorno, false);
 
         if (changed > 0) {
-
-            showToast(
-                "✨ Variante del pasto creata"
-            );
-
+            showToast("✨ Variante del pasto creata");
+        } else {
+            showToast("Nessuna alternativa disponibile");
         }
-
-        else {
-
-            showToast(
-                "Nessuna alternativa disponibile"
-            );
-
-        }
-
     }
 
 
@@ -1447,64 +600,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     // RIPRISTINA PASTO
     // ==========================================================
 
-    function resetMeal(
+    function resetMeal(giorno, pasto) {
+        const pasti = pianoAlimentare[giorno];
+        if (!pasti) return;
 
-        giorno,
+        const meal = pasti.find(item => item.pasto === pasto);
+        if (!meal) return;
 
-        pasto
+        meal.alimenti.forEach((_, foodIndex) => {
+            removeSavedChoice(giorno, pasto, foodIndex);
+        });
 
-    ) {
-
-        const pasti =
-            pianoAlimentare[
-                giorno
-            ];
-
-
-        const meal =
-            pasti.find(
-
-                item =>
-                    item.pasto ===
-                    pasto
-
-            );
-
-
-        if (!meal) {
-            return;
-        }
-
-
-        meal.alimenti.forEach(
-
-            (_, foodIndex) => {
-
-                removeSavedChoice(
-
-                    giorno,
-
-                    pasto,
-
-                    foodIndex
-
-                );
-
-            }
-
-        );
-
-
-        mostraGiorno(
-            giorno,
-            false
-        );
-
-
-        showToast(
-            "↩ Pasto originale ripristinato"
-        );
-
+        mostraGiorno(giorno, false);
+        showToast("↩ Pasto originale ripristinato");
     }
 
 
@@ -1512,357 +620,94 @@ document.addEventListener("DOMContentLoaded", async () => {
     // CREA CARD DEL PASTO
     // ==========================================================
 
-    function createMealCard(
-
-        item,
-
-        giorno,
-
-        isNextMeal = false,
-
-        cardIndex = 0
-
-    ) {
-
-        const card =
-            document.createElement(
-                "section"
-            );
-
-
-        card.className =
-            "meal-card";
-
-
-        card.dataset.meal =
-            item.pasto;
-
-
-        card.style.animationDelay =
-            `${cardIndex * 50}ms`;
-
+    function createMealCard(item, giorno, isNextMeal = false, cardIndex = 0) {
+        const card = document.createElement("section");
+        card.className = "meal-card";
+        card.dataset.meal = item.pasto;
+        card.style.animationDelay = `${cardIndex * 50}ms`;
 
         if (isNextMeal) {
+            card.classList.add("next-meal");
 
-            card.classList.add(
-                "next-meal"
-            );
-
+            const ribbon = document.createElement("div");
+            ribbon.className = "next-ribbon";
+            ribbon.textContent = "PROSSIMO";
+            card.appendChild(ribbon);
         }
 
+        const header = document.createElement("div");
+        header.className = "meal-header";
 
-        if (isNextMeal) {
+        const icon = document.createElement("div");
+        icon.className = "meal-icon";
+        icon.textContent = getMealIcon(item.pasto);
 
-            const ribbon =
-                document.createElement(
-                    "div"
-                );
+        const titleArea = document.createElement("div");
+        titleArea.className = "meal-title-area";
 
+        const title = document.createElement("div");
+        title.className = "meal-title";
+        title.textContent = item.pasto;
+        titleArea.appendChild(title);
 
-            ribbon.className =
-                "next-ribbon";
-
-
-            ribbon.textContent =
-                "PROSSIMO";
-
-
-            card.appendChild(
-                ribbon
-            );
-
+        const timeStr = getMealTime(item.pasto);
+        if (timeStr) {
+            const time = document.createElement("div");
+            time.className = "meal-time";
+            time.textContent = `🕒 ${timeStr}`;
+            titleArea.appendChild(time);
         }
 
-
-        // --------------------------------------
-        // HEADER PASTO
-        // --------------------------------------
-
-        const header =
-            document.createElement(
-                "div"
-            );
-
-
-        header.className =
-            "meal-header";
-
-
-        const icon =
-            document.createElement(
-                "div"
-            );
-
-
-        icon.className =
-            "meal-icon";
-
-
-        icon.textContent =
-            mealIcons[
-                item.pasto
-            ] || "🍴";
-
-
-        const titleArea =
-            document.createElement(
-                "div"
-            );
-
-
-        titleArea.className =
-            "meal-title-area";
-
-
-        const title =
-            document.createElement(
-                "div"
-            );
-
-
-        title.className =
-            "meal-title";
-
-
-        title.textContent =
-            item.pasto;
-
-
-        titleArea.appendChild(
-            title
-        );
-
-
-        if (
-            mealTimes[item.pasto]
-        ) {
-
-            const time =
-                document.createElement(
-                    "div"
-                );
-
-
-            time.className =
-                "meal-time";
-
-
-            time.textContent =
-                `🕒 ${mealTimes[item.pasto]}`;
-
-
-            titleArea.appendChild(
-                time
-            );
-
-        }
-
-
-        header.appendChild(
-            icon
-        );
-
-
-        header.appendChild(
-            titleArea
-        );
-
-
-        card.appendChild(
-            header
-        );
-
-
-        // --------------------------------------
-        // NOTA DEL PASTO
-        // --------------------------------------
+        header.appendChild(icon);
+        header.appendChild(titleArea);
+        card.appendChild(header);
 
         if (item.nota) {
-
-            const note =
-                document.createElement(
-                    "div"
-                );
-
-
-            note.className =
-                "meal-note";
-
-
-            note.innerHTML =
-                `💡 ${item.nota}`;
-
-
-            card.appendChild(
-                note
-            );
-
+            const note = document.createElement("div");
+            note.className = "meal-note";
+            note.innerHTML = `💡 ${item.nota}`;
+            card.appendChild(note);
         }
 
+        const foodContainer = document.createElement("div");
+        foodContainer.className = "meal-foods";
 
-        // --------------------------------------
-        // ALIMENTI
-        // --------------------------------------
-
-        const foodContainer =
-            document.createElement(
-                "div"
+        item.alimenti.forEach((alimento, foodIndex) => {
+            foodContainer.appendChild(
+                createFoodItem(alimento, giorno, item.pasto, foodIndex)
             );
+        });
 
+        card.appendChild(foodContainer);
 
-        foodContainer.className =
-            "meal-foods";
-
-
-        item.alimenti.forEach(
-
-            (alimento, foodIndex) => {
-
-                foodContainer.appendChild(
-
-                    createFoodItem(
-
-                        alimento,
-
-                        giorno,
-
-                        item.pasto,
-
-                        foodIndex
-
-                    )
-
-                );
-
-            }
-
+        const hasAlternatives = item.alimenti.some(
+            alimento => Array.isArray(alimento.alternative) && alimento.alternative.length > 0
         );
-
-
-        card.appendChild(
-            foodContainer
-        );
-
-
-        // --------------------------------------
-        // AZIONI DEL PASTO
-        // --------------------------------------
-
-        const hasAlternatives =
-
-            item.alimenti.some(
-
-                alimento =>
-
-                    Array.isArray(
-                        alimento.alternative
-                    )
-
-                    &&
-
-                    alimento.alternative.length >
-                        0
-
-            );
-
 
         if (hasAlternatives) {
+            const actions = document.createElement("div");
+            actions.className = "meal-actions";
 
-            const actions =
-                document.createElement(
-                    "div"
-                );
+            const generateBtn = document.createElement("button");
+            generateBtn.className = "generate-btn";
+            generateBtn.innerHTML = "✨ Crea alternativa";
+            generateBtn.addEventListener("click", () => {
+                generateMealAlternative(giorno, item.pasto);
+            });
 
+            const resetBtn = document.createElement("button");
+            resetBtn.className = "reset-btn";
+            resetBtn.innerHTML = "↩ Ripristina";
+            resetBtn.addEventListener("click", () => {
+                resetMeal(giorno, item.pasto);
+            });
 
-            actions.className =
-                "meal-actions";
-
-
-            const generateBtn =
-                document.createElement(
-                    "button"
-                );
-
-
-            generateBtn.className =
-                "generate-btn";
-
-
-            generateBtn.innerHTML =
-                "✨ Crea alternativa";
-
-
-            generateBtn.addEventListener(
-
-                "click",
-
-                () => {
-
-                    generateMealAlternative(
-
-                        giorno,
-
-                        item.pasto
-
-                    );
-
-                }
-
-            );
-
-
-            const resetBtn =
-                document.createElement(
-                    "button"
-                );
-
-
-            resetBtn.className =
-                "reset-btn";
-
-
-            resetBtn.innerHTML =
-                "↩ Ripristina";
-
-
-            resetBtn.addEventListener(
-
-                "click",
-
-                () => {
-
-                    resetMeal(
-
-                        giorno,
-
-                        item.pasto
-
-                    );
-
-                }
-
-            );
-
-
-            actions.appendChild(
-                generateBtn
-            );
-
-
-            actions.appendChild(
-                resetBtn
-            );
-
-
-            card.appendChild(
-                actions
-            );
-
+            actions.appendChild(generateBtn);
+            actions.appendChild(resetBtn);
+            card.appendChild(actions);
         }
 
-
         return card;
-
     }
 
 
@@ -1870,179 +715,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     // MOSTRA GIORNO
     // ==========================================================
 
-    function mostraGiorno(
-
-        giorno,
-
-        autoScrollToNext = false
-
-    ) {
-
+    function mostraGiorno(giorno, autoScrollToNext = false) {
         mealView.innerHTML = "";
 
+        const pasti = pianoAlimentare[giorno];
 
-        const pasti =
-            pianoAlimentare[
-                giorno
-            ];
-
-
-        if (
-            !Array.isArray(pasti)
-        ) {
-
+        if (!Array.isArray(pasti)) {
             mealView.innerHTML = `
-
                 <div class="error-card">
-
-                    Nessun piano disponibile
-                    per ${giorno}.
-
+                    Nessun piano disponibile per ${giorno}.
                 </div>
             `;
-
-
             return;
-
         }
 
+        const selectedDateKey = dateToKey(dataSelezionata);
+        const todayKey = dateToKey(new Date());
 
-        const today =
-            getNomeGiorno();
+        const isActualToday = selectedDateKey === todayKey;
+        const nextMeal = isActualToday ? getNextMeal() : null;
 
+        pasti.forEach((item, index) => {
+            const isNext =
+                isActualToday &&
+                nextMeal &&
+                !nextMeal.isTomorrow &&
+                item.pasto === nextMeal.name;
 
-        const selectedDateKey =
-            dateToKey(
-                dataSelezionata
+            mealView.appendChild(
+                createMealCard(item, giorno, isNext, index)
             );
+        });
 
+        if (autoScrollToNext && nextMeal && !nextMeal.isTomorrow) {
+            setTimeout(() => {
+                const target = Array.from(
+                    document.querySelectorAll(".meal-card")
+                ).find(card => card.dataset.meal === nextMeal.name);
 
-        const todayKey =
-            dateToKey(
-                new Date()
-            );
-
-
-        const isActualToday =
-
-            giorno === today
-
-            &&
-
-            selectedDateKey ===
-            todayKey;
-
-
-        const nextMeal =
-
-            isActualToday
-
-                ? getNextMeal()
-
-                : null;
-
-
-        pasti.forEach(
-
-            (item, index) => {
-
-                const isNext =
-
-                    isActualToday
-
-                    &&
-
-                    nextMeal
-
-                    &&
-
-                    !nextMeal.isTomorrow
-
-                    &&
-
-                    item.pasto ===
-                    nextMeal.name;
-
-
-                mealView.appendChild(
-
-                    createMealCard(
-
-                        item,
-
-                        giorno,
-
-                        isNext,
-
-                        index
-
-                    )
-
-                );
-
-            }
-
-        );
-
-
-        if (
-
-            autoScrollToNext
-
-            &&
-
-            nextMeal
-
-            &&
-
-            !nextMeal.isTomorrow
-
-        ) {
-
-            setTimeout(
-
-                () => {
-
-                    const target =
-
-                        Array.from(
-
-                            document.querySelectorAll(
-                                ".meal-card"
-                            )
-
-                        ).find(
-
-                            card =>
-
-                                card.dataset.meal ===
-                                nextMeal.name
-
-                        );
-
-
-                    if (target) {
-
-                        target.scrollIntoView({
-
-                            behavior:
-                                "smooth",
-
-                            block:
-                                "center"
-
-                        });
-
-                    }
-
-                },
-
-                350
-
-            );
-
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                }
+            }, 350);
         }
-
     }
 
 
@@ -2050,66 +768,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     // SELEZIONE GIORNO
     // ==========================================================
 
-    function selectDay(
+    function selectDay(giorno, autoScrollToNext = false) {
+        giornoSelezionato = giorno;
+        updateActiveDayButton(giorno);
+        mostraGiorno(giorno, autoScrollToNext);
 
-        giorno,
-
-        autoScrollToNext = false
-
-    ) {
-
-        giornoSelezionato =
-            giorno;
-
-
-        updateActiveDayButton(
-            giorno
-        );
-
-
-        mostraGiorno(
-
-            giorno,
-
-            autoScrollToNext
-
-        );
-
-
-        const activeBtn =
-
-            Array.from(
-
-                document.querySelectorAll(
-                    ".day-btn"
-                )
-
-            ).find(
-
-                btn =>
-                    btn.dataset.day ===
-                    giorno
-
-            );
-
+        const activeBtn = Array.from(
+            document.querySelectorAll(".day-btn")
+        ).find(btn => btn.dataset.day === giorno);
 
         if (activeBtn) {
-
             activeBtn.scrollIntoView({
-
-                behavior:
-                    "smooth",
-
-                inline:
-                    "center",
-
-                block:
-                    "nearest"
-
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest"
             });
-
         }
-
     }
 
 
@@ -2117,40 +791,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     // OGGI
     // ==========================================================
 
-    function goToToday(
+    function goToToday(scrollToMeal = true) {
+        dataSelezionata = new Date();
 
-        scrollToMeal = true
-
-    ) {
-
-        dataSelezionata =
-            new Date();
-
-
-        const today =
-            getNomeGiorno(
-                dataSelezionata
-            );
-
+        const giornoDaMostrare = getGiornoCorrente(dataSelezionata);
 
         if (datePicker) {
-
-            datePicker.value =
-                dateToKey(
-                    dataSelezionata
-                );
-
+            datePicker.value = dateToKey(dataSelezionata);
         }
 
-
-        selectDay(
-
-            today,
-
-            scrollToMeal
-
-        );
-
+        selectDay(giornoDaMostrare, scrollToMeal);
     }
 
 
@@ -2158,57 +808,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     // CALENDARIO
     // ==========================================================
 
-    function openSelectedDate(
-        dateString
-    ) {
+    function openSelectedDate(dateString) {
+        if (!dateString) return;
 
-        if (!dateString) {
-            return;
-        }
+        const [year, month, day] = dateString.split("-").map(Number);
+        dataSelezionata = new Date(year, month - 1, day);
 
+        const giornoDaMostrare = getGiornoCorrente(dataSelezionata);
 
-        const [
-            year,
-            month,
-            day
-        ] =
-
-            dateString
-                .split("-")
-                .map(Number);
-
-
-        dataSelezionata =
-            new Date(
-
-                year,
-
-                month - 1,
-
-                day
-
-            );
-
-
-        const weekday =
-            getNomeGiorno(
-                dataSelezionata
-            );
-
-
-        selectDay(
-
-            weekday,
-
-            false
-
-        );
-
-
-        calendarPanel.classList.remove(
-            "open"
-        );
-
+        selectDay(giornoDaMostrare, false);
+        calendarPanel.classList.remove("open");
     }
 
 
@@ -2216,94 +825,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     // EVENTI
     // ==========================================================
 
-    calendarToggle.addEventListener(
+    calendarToggle.addEventListener("click", event => {
+        event.stopPropagation();
+        calendarPanel.classList.toggle("open");
+    });
 
-        "click",
+    todayBtn.addEventListener("click", () => {
+        goToToday(true);
+    });
 
-        event => {
+    datePicker.addEventListener("change", event => {
+        openSelectedDate(event.target.value);
+    });
 
-            event.stopPropagation();
+    nextMealBtn.addEventListener("click", () => {
+        goToToday(true);
+    });
 
-
-            calendarPanel.classList.toggle(
-                "open"
-            );
-
+    document.addEventListener("click", event => {
+        if (
+            !calendarPanel.contains(event.target) &&
+            !calendarToggle.contains(event.target)
+        ) {
+            calendarPanel.classList.remove("open");
         }
-
-    );
-
-
-    todayBtn.addEventListener(
-
-        "click",
-
-        () => {
-
-            goToToday(true);
-
-        }
-
-    );
-
-
-    datePicker.addEventListener(
-
-        "change",
-
-        event => {
-
-            openSelectedDate(
-                event.target.value
-            );
-
-        }
-
-    );
-
-
-    nextMealBtn.addEventListener(
-
-        "click",
-
-        () => {
-
-            goToToday(true);
-
-        }
-
-    );
-
-
-    document.addEventListener(
-
-        "click",
-
-        event => {
-
-            if (
-
-                !calendarPanel.contains(
-                    event.target
-                )
-
-                &&
-
-                !calendarToggle.contains(
-                    event.target
-                )
-
-            ) {
-
-                calendarPanel.classList.remove(
-                    "open"
-                );
-
-            }
-
-        }
-
-    );
+    });
 
 
     // ==========================================================
@@ -2311,65 +857,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ==========================================================
 
     buildDayButtons();
-
-
     goToToday(true);
-
-
     updateClock();
 
+    setInterval(() => {
+        updateClock();
 
-    // Aggiornamento ogni minuto
+        const todayKey = dateToKey(new Date());
+        const selectedKey = dateToKey(dataSelezionata);
 
-    setInterval(
-
-        () => {
-
-            updateClock();
-
-
-            const today =
-                getNomeGiorno();
-
-
-            const todayKey =
-                dateToKey(
-                    new Date()
-                );
-
-
-            const selectedKey =
-                dateToKey(
-                    dataSelezionata
-                );
-
-
-            if (
-
-                giornoSelezionato ===
-                today
-
-                &&
-
-                selectedKey ===
-                todayKey
-
-            ) {
-
-                mostraGiorno(
-
-                    today,
-
-                    false
-
-                );
-
-            }
-
-        },
-
-        60000
-
-    );
+        if (selectedKey === todayKey && giornoSelezionato) {
+            mostraGiorno(giornoSelezionato, false);
+        }
+    }, 60000);
 
 });
